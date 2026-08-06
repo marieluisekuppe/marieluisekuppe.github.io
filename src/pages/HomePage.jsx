@@ -8,10 +8,9 @@ function HomePage() {
     <div className="page">
       <section className="hero-section">
         <p className="eyebrow">Portfolio</p>
-        <h1>Hej, jeg hedder Marie-Luise Kuppe</h1>
+        <h1>Ikk kig, Lien</h1>
         <p className="hero-text">
-          Jeg arbejder med frontend, design og digitale produkter. Her samler
-          jeg projekter, proces og det, jeg lærer undervejs.
+          Hvis du ser det her, skylder du en sodavand :3
         </p>
         <div className="actions">
           <Link className="button" to="/projects">
@@ -42,6 +41,12 @@ function HomePage() {
             </article>
           ))}
         </div>
+
+        <section className="footer">
+          <div className="footer-content">
+            <p>&copy; {new Date().getFullYear()} Marie-Luise Kuppe.</p>
+          </div>
+        </section>
       </section>
     </div>
   );
