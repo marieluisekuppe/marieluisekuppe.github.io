@@ -319,7 +319,7 @@ p {
   color: var(--green);
   font-weight: 400;
   margin: 0;
-  margin-left: -15rem;
+  margin-left: -18rem;
   white-space: nowrap;
 }
 
@@ -349,8 +349,7 @@ p {
 .footer-contact {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: space-around;
   color: var(--green);
 }
 
@@ -379,6 +378,11 @@ p {
   font-size: 1rem;
 }
 
+.telephone-text {
+  color: var(--green);
+  margin-left: 0.5rem;
+}
+
 .divider-vertical {
   width: 1px;
   height: 2rem;
@@ -388,7 +392,6 @@ p {
 .social-links {
   display: flex;
   gap: 1.5rem;
-  flex: 1;
 }
 
 .social-links a {

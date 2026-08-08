@@ -68,8 +68,10 @@ function HomePage() {
             <span className="email-text">mluisek@gmail.com</span>
           </a>
           <div className="divider-vertical"></div>
-          <span className="telephone">📞</span>
-          22 70 23 72
+          <div className="telephone">
+            <span className="telephone">📞</span>
+            <span className="telephone-text">22 70 23 72</span>
+          </div>
           <div className="divider-vertical"></div>
           <div className="social-links">
             <a
@@ -88,10 +90,6 @@ function HomePage() {
               <span>ig</span>
             </a>
           </div>
-          <a className="cta-link" href="mailto:mluisek@gmail.com">
-            Lad os tage en snak
-            <span className="arrow">→</span>
-          </a>
         </div>
       </section>
     </div>
