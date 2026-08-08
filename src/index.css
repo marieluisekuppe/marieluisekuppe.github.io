@@ -9,8 +9,9 @@
     sans-serif;
   --green: #354f41;
   --green-hover: #788980;
-  --beige: #f9f6f1;
+  --border-hover: #16211b;
   --background: #e6ddcf;
+  --beige: #f5f5f0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -290,15 +291,123 @@ p {
 
 /* contact section styling forside*/
 .contact-section {
-  height: 30vh;
+  background-color: #f5f5f0;
+  padding: 2rem 2rem;
+  position: relative;
+  border-radius: 0.75rem;
+}
+.contact-box {
+  border: transparent;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.contact-box h2 {
+  font-size: 2.5rem;
+  color: var(--green);
+  line-height: 0.8;
+}
+
+.contact-box h2:last-of-type {
+  margin-bottom: 0;
+}
+
+.contact-box h3 {
+  font-size: 1.25rem;
+  color: var(--green);
+  font-weight: 400;
+  margin: 0;
+}
+
+.contact-box h3 .underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d0d0cc;
+  margin: 2rem 0;
+}
+
+.footer-contact {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding: 2rem 2rem 0;
-  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.email-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.email-link:hover {
+  color: var(--border-hover);
+}
+
+.envelope {
+  font-size: 1.5rem;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 2rem;
+  background-color: #d0d0cc;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.social-links a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1.5px solid #999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.social-links a:hover {
+  border-color: var(--border-hover);
+  color: var(--border-hover);
+}
+
+.cta-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: gap 0.2s;
+}
+
+.cta-link:hover {
+  gap: 0.75rem;
+  color: var(--green-hover);
+}
+
+.arrow {
+  font-size: 1.5rem;
 }
 
 /* footer styling */

@@ -44,22 +44,52 @@ function HomePage() {
         </div>
       </section>
 
-      <div className="contact-section">
-        <div className="section-heading"></div>
-        <h1>Mangler I en praktikant?</h1>
-        <h2>Jeg er klar til at lære nyt og udvikle nye færdigheder.</h2>
-      </div>
+      <section className="section contact-section">
+        <div className="contact-box">
+          <div>
+            <h2>Mangler I en praktikant,</h2>
+            <h2>der er klar til at lære,</h2>
+            <h2>skabe og bidrage?</h2>
+          </div>
+          <h3>
+            Så har I fundet <span className="underline">mig</span>!
+          </h3>
+        </div>
 
-      <div className="link-container">
-        <a className="footer-link" href="mailto:mluisek@gmail.com">
-          Email
-        </a>
-        <div className="footer-link">
-          <a href="https://www.linkedin.com/in/marie-luise-kuppe-a2a815267/">
-            LinkedIn
+        <div className="divider"></div>
+
+        <div className="footer-contact">
+          <a className="email-link" href="mailto:mluisek@gmail.com">
+            <span className="envelope">✉</span>
+            mluisek@gmail.com
+          </a>
+
+          <div className="divider-vertical"></div>
+
+          <div className="social-links">
+            <a
+              href="https://www.linkedin.com/in/marie-luise-kuppe-a2a815267/"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <span>in</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/marieluisekuppe/"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <span>ig</span>
+            </a>
+          </div>
+
+          <a className="cta-link" href="mailto:mluisek@gmail.com">
+            Lad os tage en snak
+            <span className="arrow">→</span>
           </a>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

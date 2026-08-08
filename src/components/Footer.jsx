@@ -5,7 +5,6 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <p>&copy;{new Date().getFullYear()} Marie-Luise Kuppe</p>
-          <p>Multimediedesigner</p>
         </div>
         <div className="footer-content">
           <p>Aarhus, Danmark</p>
