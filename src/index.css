@@ -7,8 +7,11 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  color: #1d2430;
-  background: #f7f4ef;
+  --green: #354f41;
+  --green-hover: #788980;
+  --beige: #f9f6f1;
+  --background: #e6ddcf;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +25,7 @@
 body {
   margin: 0;
   min-width: 320px;
+  background: var(--background);
 }
 
 a {
@@ -39,6 +43,7 @@ textarea {
   font: inherit;
 }
 
+/* header styling */
 .site-header {
   display: flex;
   align-items: center;
@@ -50,8 +55,8 @@ textarea {
 }
 
 .brand {
-  color: #111827;
-  font-weight: 800;
+  color: var(--green);
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -60,25 +65,33 @@ textarea {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.25rem;
+  text-transform: uppercase;
 }
 
 .site-nav a {
   border-radius: 999px;
-  color: #475569;
+  hyphens: auto;
+  color: var(--green);
   padding: 0.55rem 0.8rem;
   text-decoration: none;
 }
 
-.site-nav a.active,
 .site-nav a:hover {
-  color: #111827;
-  background: #ffffff;
+  color: var(--beige);
+  background: var(--green-hover);
 }
+
+.site-nav a.active {
+  color: var(--beige);
+  background: var(--green);
+}
+
+/* page styling */
 
 .page {
   width: min(100% - 2rem, 1120px);
   margin: 0 auto;
-  padding: 3rem 0 5rem;
+  padding: 2rem 0 2rem;
 }
 
 .narrow {
@@ -87,14 +100,14 @@ textarea {
 
 .hero-section {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   align-content: center;
-  min-height: 58svh;
-  padding: 3rem 0;
+  min-height: 60svh;
+  padding: 2rem 0;
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .section-heading {
@@ -104,20 +117,13 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
-.footer {
-  padding: 3rem 0;
-  border-top: 1px solid #e5ddd2;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .intro {
   max-width: 720px;
 }
 
 .eyebrow {
   margin: 0;
-  color: #7c3aed;
+  color: var(--green);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -132,7 +138,6 @@ p {
 }
 
 h1 {
-  max-width: 760px;
   margin-bottom: 1rem;
   color: #111827;
   font-size: clamp(2.6rem, 8vw, 5.5rem);
@@ -156,7 +161,7 @@ h3 {
 }
 
 p {
-  color: #526173;
+  color: var(--green);
   line-height: 1.65;
 }
 
@@ -202,7 +207,7 @@ p {
   overflow: hidden;
   border: 1px solid #e5ddd2;
   border-radius: 0.75rem;
-  background: #fffaf3;
+  background: var(--beige);
 }
 
 .project-card img {
@@ -264,7 +269,7 @@ p {
 .contact-list {
   border: 1px solid #e5ddd2;
   border-radius: 0.75rem;
-  background: #fffaf3;
+  background: var(--beige);
   padding: 1rem;
 }
 
@@ -283,7 +288,49 @@ p {
   font-weight: 800;
 }
 
-@media (max-width: 720px) {
+/* contact section styling forside*/
+.contact-section {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 2rem 0;
+  text-align: left;
+}
+
+/* footer styling */
+.site-footer {
+  background: var(--green);
+  color: var(--beige);
+  margin: 0 auto;
+  border-top: 1px solid var(--beige);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-container {
+  box-sizing: border-box;
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content p {
+  color: var(--beige);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -294,11 +341,15 @@ p {
   }
 
   .page {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 
   .hero-section {
     min-height: auto;
-    padding-top: 2rem;
+    padding-top: 1rem;
+  }
+
+  .footer-container {
+    text-align: center;
   }
 }
