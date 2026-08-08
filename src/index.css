@@ -12,6 +12,7 @@
   --border-hover: #16211b;
   --background: #e6ddcf;
   --beige: #f5f5f0;
+  --divider: #d0d0cc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -314,13 +315,25 @@ p {
 }
 
 .contact-box h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--green);
   font-weight: 400;
   margin: 0;
+  margin-left: -15rem;
+  white-space: nowrap;
 }
 
-.contact-box h3 .underline {
+.contact-box h3 a {
+  font-style: italic;
+  color: inherit;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  margin: 0 2px;
+  text-decoration: none;
+}
+
+.contact-box h3 a:hover {
+  transform: scale(1.1);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
@@ -329,7 +342,7 @@ p {
 .divider {
   width: 100%;
   height: 1px;
-  background-color: #d0d0cc;
+  background-color: var(--divider);
   margin: 2rem 0;
 }
 
@@ -338,30 +351,38 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  color: var(--green);
 }
 
 .email-link {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #333;
+  color: var(--green);
   text-decoration: none;
-  font-size: 1rem;
-  white-space: nowrap;
 }
 
-.email-link:hover {
-  color: var(--border-hover);
+.email-link .email-text {
+  text-decoration: none;
 }
 
-.envelope {
+.email-link:hover .email-text {
+  text-decoration: underline;
+}
+
+.email-link .envelope {
   font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.telephone {
+  font-size: 1rem;
 }
 
 .divider-vertical {
   width: 1px;
   height: 2rem;
-  background-color: #d0d0cc;
+  background-color: var(--divider);
 }
 
 .social-links {
@@ -373,21 +394,22 @@ p {
 .social-links a {
   width: 2.5rem;
   height: 2.5rem;
-  border: 1.5px solid #999;
+  border: 1px solid var(--border-hover);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
+  color: var(--border-hover);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 450;
   font-size: 0.875rem;
   transition: all 0.2s;
 }
 
 .social-links a:hover {
   border-color: var(--border-hover);
-  color: var(--border-hover);
+  background-color: var(--green-hover);
+  color: var(--beige);
 }
 
 .cta-link {
@@ -398,11 +420,11 @@ p {
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
-  transition: gap 0.2s;
+  transition: gap 0.25s;
 }
 
 .cta-link:hover {
-  gap: 0.75rem;
+  gap: 1rem;
   color: var(--green-hover);
 }
 

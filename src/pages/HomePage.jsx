@@ -52,7 +52,11 @@ function HomePage() {
             <h2>skabe og bidrage?</h2>
           </div>
           <h3>
-            Så har I fundet <span className="underline">mig</span>!
+            Så har I fundet{" "}
+            <Link to="/about" className="underline">
+              mig
+            </Link>
+            !
           </h3>
         </div>
 
@@ -61,11 +65,12 @@ function HomePage() {
         <div className="footer-contact">
           <a className="email-link" href="mailto:mluisek@gmail.com">
             <span className="envelope">✉</span>
-            mluisek@gmail.com
+            <span className="email-text">mluisek@gmail.com</span>
           </a>
-
           <div className="divider-vertical"></div>
-
+          <span className="telephone">📞</span>
+          22 70 23 72
+          <div className="divider-vertical"></div>
           <div className="social-links">
             <a
               href="https://www.linkedin.com/in/marie-luise-kuppe-a2a815267/"
@@ -83,7 +88,6 @@ function HomePage() {
               <span>ig</span>
             </a>
           </div>
-
           <a className="cta-link" href="mailto:mluisek@gmail.com">
             Lad os tage en snak
             <span className="arrow">→</span>
