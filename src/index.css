@@ -10,7 +10,6 @@
   --green: #354f41;
   --green-hover: #788980;
   --border-hover: #16211b;
-  --background: #e6ddcf;
   --beige: #f5f5f0;
   --divider: #d0d0cc;
 
@@ -27,7 +26,7 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--background);
+  background: var(--beige);
 }
 
 a {
