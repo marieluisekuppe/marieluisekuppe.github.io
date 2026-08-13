@@ -12,11 +12,8 @@ function HomePage() {
         <h2>Jeg er Marie-Luise</h2>
         <p className="hero-text">
           Multimediedesignstuderende med passion for design, programmering og
-          problemløsning.
-          <p className="hero-text">
-            Jeg elsker nye udfordringer og motiveres af at skabe løsninger, der
-            ser både godt ud og men også fungerer teknisk.
-          </p>
+          problemløsning. Jeg elsker nye udfordringer og motiveres af at skabe
+          løsninger, der ser både godt ud og men også fungerer teknisk.
         </p>
       </section>
 
