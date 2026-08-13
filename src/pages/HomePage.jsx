@@ -8,10 +8,12 @@ function HomePage() {
   return (
     <div className="page">
       <section className="hero-section">
-        <p className="eyebrow">Portfolio</p>
-        <h1>Ikk kig, Lien</h1>
+        <h1>Halløjsovs</h1>
         <p className="hero-text">
-          Hvis du ser det her, skylder du en sodavand. :3
+          Jeg er multimediedesignstuderende med passion for design,
+          programmering og problemløsning. Jeg elsker nye udfordringer og
+          motiveres af at skabe løsninger, der både ser godt ud og fungerer
+          teknisk.
         </p>
         <div className="actions">
           <Link className="button" to="/projects">

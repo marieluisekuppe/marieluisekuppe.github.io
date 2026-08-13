@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <header className="site-header">
       <NavLink className="brand" to="/">
-        Marie-Luise Kuppe
+        <img src="/round.svg" alt="Logo" />
       </NavLink>
 
       <nav className="site-nav" aria-label="Primær navigation">

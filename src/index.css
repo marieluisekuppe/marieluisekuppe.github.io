@@ -1,12 +1,8 @@
 :root {
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: the-seasons, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1px;
   --green: #354f41;
   --green-hover: #788980;
   --border-hover: #16211b;
@@ -59,6 +55,12 @@ textarea {
   color: var(--green);
   font-weight: 700;
   text-decoration: none;
+}
+
+.brand img {
+  width: 50px;
+  height: auto;
+  margin-right: 0.5rem;
 }
 
 .site-nav {
@@ -141,7 +143,7 @@ p {
 h1 {
   margin-bottom: 1rem;
   color: #111827;
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   line-height: 0.95;
   letter-spacing: 0;
 }
@@ -162,8 +164,12 @@ h3 {
 }
 
 p {
+  font-family: "roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
   color: var(--green);
   line-height: 1.65;
+  letter-spacing: 0;
 }
 
 .hero-text,
@@ -184,18 +190,19 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
-  border: 1px solid #111827;
+  border: 1px solid var(--border-hover);
   border-radius: 999px;
-  color: #ffffff;
-  background: #111827;
+  color: var(--beige);
+  background: var(--green);
   padding: 0.7rem 1rem;
   font-weight: 700;
   text-decoration: none;
 }
 
 .button.secondary {
-  color: #111827;
+  color: var(--green);
   background: transparent;
+  border: 1px solid var(--green);
 }
 
 .project-grid {
