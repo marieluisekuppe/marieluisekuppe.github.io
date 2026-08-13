@@ -5,11 +5,10 @@ function ProjectsPage() {
   return (
     <div className="page">
       <section className="section intro">
-        <p className="eyebrow">Projekter</p>
         <h1>Mine projekter</h1>
         <p>
-          Udskift eksemplerne med dine egne projekter. Brug korte beskrivelser,
-          tydelige billeder og links til live versioner eller GitHub repos.
+          Her kan du gå på opdagelse i nogle af de projekter, jeg har arbejdet
+          med under min uddannelse.
         </p>
       </section>
 
@@ -26,7 +25,9 @@ function ProjectsPage() {
                   <li key={tag}>{tag}</li>
                 ))}
               </ul>
-              <Link to={`/projects/${project.slug}`}>Se projekt</Link>
+              <Link to={`/projects/${project.slug}`}>
+                Læs mere om projektet
+              </Link>
             </div>
           </article>
         ))}

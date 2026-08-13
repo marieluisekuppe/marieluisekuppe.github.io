@@ -12,7 +12,7 @@ function ProjectPage() {
         <h1>Projektet blev ikke fundet</h1>
         <p>Det projekt findes ikke i listen endnu.</p>
         <Link className="button" to="/projects">
-          Tilbage til projekter
+          ← Tilbage
         </Link>
       </div>
     );
@@ -21,7 +21,7 @@ function ProjectPage() {
   return (
     <article className="page narrow">
       <Link className="back-link" to="/projects">
-        Tilbage til projekter
+        ← Tilbage til alle projekter
       </Link>
 
       <img className="detail-image" src={project.image} alt="" />

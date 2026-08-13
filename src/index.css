@@ -1,6 +1,6 @@
 :root {
   font-family: the-seasons, sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   letter-spacing: 1px;
   --green: #354f41;
@@ -37,7 +37,9 @@ img {
 button,
 input,
 textarea {
-  font: inherit;
+  font-family: "roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 /* header styling */
@@ -103,14 +105,13 @@ textarea {
 
 .hero-section {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   align-content: center;
-  min-height: 60svh;
   padding: 2rem 0;
 }
 
 .section {
-  padding: 2rem 0;
+  padding: 0;
 }
 
 .section-heading {
@@ -120,8 +121,18 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+.section-heading.large-heading h2 {
+  font-family: "the-seasons", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: clamp(1rem, 3vw, 2rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
 .intro {
   max-width: 720px;
+  padding: 1.5rem 0;
 }
 
 .eyebrow {
@@ -149,9 +160,12 @@ h1 {
 }
 
 h2 {
+  font-family: "dm-sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   margin-bottom: 0.75rem;
   color: #111827;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(1.6rem, 4vw, 1.5rem);
   line-height: 1.05;
   letter-spacing: 0;
 }
@@ -174,11 +188,15 @@ p {
 
 .hero-text,
 .lead {
-  max-width: 680px;
+  max-width: 960px;
   font-size: 1.15rem;
 }
 
 .actions {
+  font-family: "roboto", serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -197,12 +215,24 @@ p {
   padding: 0.7rem 1rem;
   font-weight: 700;
   text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: var(--green-hover);
+  transform: scale(1.1);
 }
 
 .button.secondary {
   color: var(--green);
   background: transparent;
   border: 1px solid var(--green);
+}
+
+.button.secondary:hover {
+  background: var(--green);
+  color: var(--beige);
+  transform: scale(1.1);
 }
 
 .project-grid {
@@ -224,13 +254,31 @@ p {
   object-fit: cover;
 }
 
+.project-card h2 {
+  font-family: "the-seasons", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
 .project-card-content {
   padding: 1.1rem;
 }
 
 .project-card a {
-  color: #5b21b6;
+  font-family: "roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.65;
+  letter-spacing: 0;
+  color: var(--green);
   font-weight: 800;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .detail-image {
@@ -242,13 +290,23 @@ p {
 }
 
 .back-link {
+  font-family: "roboto", serif;
+  letter-spacing: 0;
   display: inline-flex;
   margin-bottom: 1.5rem;
-  color: #5b21b6;
+  color: var(--green);
   font-weight: 800;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .tag-list {
+  font-family: "roboto", serif;
+  letter-spacing: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -299,8 +357,10 @@ p {
 /* contact section styling forside*/
 .contact-section {
   background-color: #f5f5f0;
+  margin-top: 2rem;
   padding: 2rem 2rem;
   position: relative;
+  min-height: 30svh;
   border-radius: 0.75rem;
 }
 .contact-box {
@@ -311,7 +371,10 @@ p {
 }
 
 .contact-box h2 {
-  font-size: 2.5rem;
+  font-family: "roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2rem;
   color: var(--green);
   line-height: 0.8;
 }
@@ -353,6 +416,9 @@ p {
 }
 
 .footer-contact {
+  font-family: "roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -444,9 +510,7 @@ p {
 /* footer styling */
 .site-footer {
   background: var(--green);
-  color: var(--beige);
   margin: 0 auto;
-  border-top: 1px solid var(--beige);
   width: 100vw;
   position: relative;
   left: 50%;
@@ -466,7 +530,7 @@ p {
 }
 
 .footer-content p {
-  color: var(--beige);
+  color: var(--green-hover);
   margin: 0;
 }
 
@@ -481,12 +545,32 @@ p {
   }
 
   .page {
-    padding-top: 1rem;
+    padding: 1;
   }
 
   .hero-section {
     min-height: auto;
-    padding-top: 1rem;
+    padding: 0;
+  }
+
+  .contact-section {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-box h3 {
+    margin-left: 0;
+  }
+
+  .footer-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .footer-container {

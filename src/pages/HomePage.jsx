@@ -8,27 +8,21 @@ function HomePage() {
   return (
     <div className="page">
       <section className="hero-section">
-        <h1>Halløjsovs</h1>
+        <h1>Halløjsa!</h1>
+        <h2>Jeg er Marie-Luise</h2>
         <p className="hero-text">
-          Jeg er multimediedesignstuderende med passion for design,
-          programmering og problemløsning. Jeg elsker nye udfordringer og
-          motiveres af at skabe løsninger, der både ser godt ud og fungerer
-          teknisk.
+          Multimediedesignstuderende med passion for design, programmering og
+          problemløsning.
+          <p className="hero-text">
+            Jeg elsker nye udfordringer og motiveres af at skabe løsninger, der
+            ser både godt ud og men også fungerer teknisk.
+          </p>
         </p>
-        <div className="actions">
-          <Link className="button" to="/projects">
-            Se projekter
-          </Link>
-          <Link className="button secondary" to="/contact">
-            Kontakt mig
-          </Link>
-        </div>
       </section>
 
       <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">Udvalgte projekter</p>
-          <h2>Start med få projekter og gør dem stærke.</h2>
+        <div className="section-heading large-heading">
+          <h2>Nyeste projekter</h2>
         </div>
 
         <div className="project-grid">
