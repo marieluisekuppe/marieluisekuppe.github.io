@@ -8,13 +8,18 @@ function HomePage() {
   return (
     <div className="page">
       <section className="hero-section">
-        <h1>Halløjsa!</h1>
-        <h2>Jeg er Marie-Luise</h2>
-        <p className="hero-text">
-          Multimediedesignstuderende med passion for design, programmering og
-          problemløsning. Jeg elsker nye udfordringer og motiveres af at skabe
-          løsninger, der ser både godt ud og men også fungerer teknisk.
-        </p>
+        <div className="hero-text-block">
+          <h1>Halløjsa!</h1>
+          <h2>Jeg er Marie-Luise</h2>
+          <p className="hero-text">
+            Multimediedesignstuderende med passion for design, programmering og
+            problemløsning. Jeg elsker nye udfordringer og motiveres af at skabe
+            løsninger, der ser både godt ud og men også fungerer teknisk.
+          </p>
+        </div>
+        <div className="hero-image">
+          <img src="./public/kuppe1.jpeg" alt="Marie-Luise Kuppe" />
+        </div>
       </section>
 
       <section className="section">
