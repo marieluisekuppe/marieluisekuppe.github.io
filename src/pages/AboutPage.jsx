@@ -19,7 +19,7 @@ function AboutPage() {
           </p>
         </div>
         <div className="about-image">
-          <img src="./public/kuppe2.jpeg" alt="Marie-Luise Kuppe" />
+          <img src="/kuppe2.jpeg" alt="Marie-Luise Kuppe" />
         </div>
       </div>
 

@@ -195,7 +195,7 @@ p {
 .hero-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 6vh;
   align-items: center;
 }
 

@@ -18,7 +18,7 @@ function HomePage() {
           </p>
         </div>
         <div className="hero-image">
-          <img src="./public/kuppe1.jpeg" alt="Marie-Luise Kuppe" />
+          <img src="/kuppe1.jpeg" alt="Marie-Luise Kuppe" />
         </div>
       </section>
 
