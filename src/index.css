@@ -60,8 +60,8 @@ textarea {
 }
 
 .brand img {
-  width: 50px;
-  height: auto;
+  display: flex;
+  width: 140px;
   margin-right: 0.5rem;
 }
 
@@ -69,26 +69,25 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 0.25rem;
+  gap: 1.5rem;
   text-transform: uppercase;
 }
 
 .site-nav a {
-  border-radius: 999px;
-  hyphens: auto;
-  color: var(--green);
-  padding: 0.55rem 0.8rem;
   text-decoration: none;
 }
 
 .site-nav a:hover {
-  color: var(--beige);
-  background: var(--green-hover);
+  color: var(--green-hover);
+  transform: scale(1.05);
 }
 
 .site-nav a.active {
-  color: var(--beige);
-  background: var(--green);
+  color: var(--green);
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 /* page styling */
