@@ -199,8 +199,14 @@ p {
   align-items: center;
 }
 
+.hero-image {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 .hero-image img {
-  width: 50%;
+  width: 65%;
   object-fit: cover;
   border-radius: 0.5rem;
 }
