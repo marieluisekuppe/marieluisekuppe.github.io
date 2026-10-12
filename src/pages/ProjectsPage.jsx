@@ -7,8 +7,9 @@ function ProjectsPage() {
       <section className="section intro">
         <h1>Mine projekter</h1>
         <p>
-          Her kan du gå på opdagelse i nogle af de projekter, jeg har arbejdet
-          med under min uddannelse.
+          Tag et kig i nogle af de projekter som jeg har arbejdet på i løbet af
+          min uddannelse. Her kan du læse om de forskellige projekter, se
+          billeder og finde links til live sites og GitHub repositories.
         </p>
       </section>
 
