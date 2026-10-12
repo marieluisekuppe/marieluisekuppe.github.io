@@ -62,6 +62,64 @@ const projects = [
       },
     ],
   },
+
+  {
+    slug: "Mellemrum",
+    title: "MELLEMRUM",
+    year: "2026",
+    summary: "Redesign af fiktiv website til Mellemrum.",
+    description: "Beskrivelse her",
+    tags: ["Design", "Frontend", "Proces"],
+    image: `${import.meta.env.BASE_URL}`,
+    links: [
+      {
+        label: "Live Site",
+        href: "https://marieluisekuppe.github.io/ixd_eksamen_spilcafe/",
+      },
+      {
+        label: "GitHub repo",
+        href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+      },
+    ],
+  },
+  {
+    slug: "Vuuh",
+    title: "VUUH",
+    year: "2026",
+    summary: "Redesign af Onboarding til Vuuh.",
+    description: "Beskrivelse her",
+    tags: ["Design", "Frontend", "Proces"],
+    image: `${import.meta.env.BASE_URL}`,
+    links: [
+      {
+        label: "Live Site",
+        href: "https://marieluisekuppe.github.io/ixd_eksamen_spilcafe/",
+      },
+      {
+        label: "GitHub repo",
+        href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+      },
+    ],
+  },
+  {
+    slug: "La Rōuge",
+    title: "LA ROUGE",
+    year: "2026",
+    summary: "Redesign af Secondhand side til La Rōuge.",
+    description: "Beskrivelse her",
+    tags: ["Design", "Frontend", "Proces"],
+    image: `${import.meta.env.BASE_URL}`,
+    links: [
+      {
+        label: "Live Site",
+        href: "https://marieluisekuppe.github.io/ixd_eksamen_spilcafe/",
+      },
+      {
+        label: "GitHub repo",
+        href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+      },
+    ],
+  },
 ];
 
 export default projects;
