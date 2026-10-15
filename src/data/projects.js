@@ -144,7 +144,7 @@ const projects = [
     description:
       "Vuuh ønskede at skabe en mere problemfri selvbetjeningsoplevelse for nye brugere, der opretter en konto og konfigurerer platformen. Målet var at sikre, at brugerne kunne gennemføre onboarding-processen selvstændigt uden behov for support.",
     tags: ["UX-Audit", "Onboarding", "Figma"],
-    collaboration: ["3 personer"],
+    collaboration: ["4 personer"],
     role: ["Optimering"],
     duration: ["2 uger"],
 
@@ -153,6 +153,10 @@ const projects = [
       {
         label: "Se løsning",
         href: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&t=Ly4cCxXbtYRwrQnA-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=187%3A1116&page-id=102%3A2439",
+      },
+      {
+        label: "UX-audit (PDF)",
+        href: `${import.meta.env.BASE_URL}vuuh/case2_vuuh_ux_audit.pdf`,
       },
     ],
     caseSections: [
@@ -226,27 +230,36 @@ const projects = [
               'Knappen "Start Free Trial" i Vuuhs løsning gav indtryk af, at brugeren havde gennemført hele processen. Efterfølgende blev brugeren dog sendt til en tom succes-side uden vejledning, hvilket skabte usikkerhed om den næste handling.',
             ],
             onboardingImages: [
-              { src: "", alt: "Screenshot af Vuuh onboarding trin 1" },
-              { src: "", alt: "Screenshot af Vuuh onboarding trin 2" },
-              { src: "", alt: "Screenshot af Vuuh onboarding trin 3" },
+              {
+                src: `${import.meta.env.BASE_URL}vuuh/vuuh_formular1.png`,
+                alt: "Screenshot af Vuuh onboarding trin 1",
+              },
+              {
+                src: `${import.meta.env.BASE_URL}vuuh/vuuh_formular2.png`,
+                alt: "Screenshot af Vuuh onboarding trin 2",
+              },
+              {
+                src: `${import.meta.env.BASE_URL}vuuh/vuuh_formular3.png`,
+                alt: "Screenshot af Vuuh onboarding trin 3",
+              },
             ],
             followupParagraphs: [
               "For at skabe et mere sammenhængende flow blev onboarding-processen redesignet ud fra Guided Steps-princippet:",
             ],
             optimizationImages: [
               {
-                src: "",
+                src: `${import.meta.env.BASE_URL}vuuh/vuuh_formular1.1.png`,
                 alt: "Optimeret Vuuh onboarding med tydelig næste handling",
                 point:
                   "Tydelig information om den næste handling efter formularindsendelse.",
               },
               {
-                src: "",
+                src: `${import.meta.env.BASE_URL}vuuh/vuuh_formular2.2.png`,
                 alt: "Optimeret Vuuh onboarding med CTA til næste trin",
                 point: "En CTA, der leder brugeren videre til næste trin.",
               },
               {
-                src: "",
+                src: `${import.meta.env.BASE_URL}vuuh/vuuh_formular3.3.png`,
                 alt: "Optimeret Vuuh onboarding med bekræftelses-overlay",
                 point:
                   "Et enkelt bekræftelses-overlay i stedet for endnu en kompleks side.",
@@ -256,8 +269,7 @@ const projects = [
           {
             heading: "4. Opsætning af en testordre",
             paragraphs: [
-              "Ved gennemgangen af Vuuhs løsning identificerede vi, at brugerne ikke blev vejledt til at gennemføre den nødvendige testordre. Uden denne handling kunne hverken brugeren eller Vuuh vide, om systemet var opsat korrekt. Brugeren opnåede derfor heller ikke en tydelig succesoplevelse.",
-              "For at løse dette blev der introduceret et wizard-baseret onboarding-flow:",
+              "Analysen viste, at brugerne ikke blev guidet til at gennemføre den nødvendige testordre, hvilket skabte usikkerhed om, hvorvidt systemet var korrekt opsat. Derfor designede vi et wizard-baseret onboarding-flow, der guider brugeren gennem processen og sikrer en tydelig succesoplevelse.",
             ],
             points: [
               "Hvert trin forklares enkelt og konkret.",
@@ -266,9 +278,10 @@ const projects = [
               "En loading-tilstand skaber tryghed og forklarer, at der kun er tale om en testordre.",
               'Flowet afsluttes med en tydelig succesbesked: "Order Successfully Downloaded".',
             ],
-            closingParagraphs: [
-              "De guidede trin reducerer den kognitive belastning og gør processen lettere at gennemføre for brugere, der har behov for ekstra støtte og vejledning.",
-            ],
+            video: {
+              src: `${import.meta.env.BASE_URL}vuuh/test_ordre_vuuh_video.mp4`,
+              alt: "Video af det optimerede Vuuh-testordreflow",
+            },
           },
         ],
       },

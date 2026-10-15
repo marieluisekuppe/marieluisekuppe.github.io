@@ -1,6 +1,57 @@
+import { useEffect, useRef } from "react";
 import { Link, useParams } from "react-router";
 import projects from "../data/projects";
 import "../css/project-detail.css";
+
+function CaseVideo({ video }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement || !video.src) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          videoElement.play().catch(() => {});
+        } else {
+          videoElement.pause();
+        }
+      },
+      { threshold: [0, 0.5] },
+    );
+
+    observer.observe(videoElement);
+    return () => {
+      observer.disconnect();
+      videoElement.pause();
+    };
+  }, [video.src]);
+
+  return (
+    <div className="project-case-video-box">
+      {video.src ? (
+        <video
+          ref={videoRef}
+          className="project-case-video"
+          src={video.src}
+          poster={video.poster || undefined}
+          aria-label={video.alt}
+          autoPlay={false}
+          controls
+          muted
+          playsInline
+          preload="metadata"
+        />
+      ) : (
+        <div className="project-case-video-placeholder">
+          <span>Video til onboarding-flow</span>
+          <small>Tilføj en videosti i projektdataene</small>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function CaseImage({ image, index, note }) {
   return (
@@ -120,19 +171,39 @@ function ProjectPage() {
                 {section.items?.map((item) => (
                   <div className="project-case-item" key={item.heading}>
                     <h3>{item.heading}</h3>
-                    {item.paragraphs?.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                    {item.points?.length > 0 && (
-                      <ul className="project-case-points">
-                        {item.points.map((point) => (
-                          <li key={point}>{point}</li>
+                    {item.video ? (
+                      <div className="project-case-video-layout">
+                        <div className="project-case-video-copy">
+                          {item.paragraphs?.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                          {item.points?.length > 0 && (
+                            <ul className="project-case-points">
+                              {item.points.map((point) => (
+                                <li key={point}>{point}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                        <CaseVideo video={item.video} />
+                      </div>
+                    ) : (
+                      <>
+                        {item.paragraphs?.map((paragraph) => (
+                          <p key={paragraph}>{paragraph}</p>
                         ))}
-                      </ul>
+                        {item.points?.length > 0 && (
+                          <ul className="project-case-points">
+                            {item.points.map((point) => (
+                              <li key={point}>{point}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </>
                     )}
                     {item.onboardingImages?.length > 0 && (
                       <div
-                        className="project-case-image-row"
+                        className="project-case-image-row project-case-image-row-onboarding"
                         aria-label="Billeder af Vuuhs oprindelige onboarding"
                       >
                         {item.onboardingImages.map((image, index) => (
@@ -149,7 +220,7 @@ function ProjectPage() {
                     ))}
                     {item.optimizationImages?.length > 0 && (
                       <div
-                        className="project-case-image-row"
+                        className="project-case-image-row project-case-image-row-optimization"
                         aria-label="Billeder af den optimerede Vuuh onboarding"
                       >
                         {item.optimizationImages.map((image, index) => (
