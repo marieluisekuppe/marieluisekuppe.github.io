@@ -210,11 +210,6 @@ const projects = [
                 src: `${import.meta.env.BASE_URL}vuuh/succes_ny.png`,
                 alt: "Vuuhs redesignede succes-side",
               },
-              annotations: [
-                "Brugerens shopnavn fremhæves for at skabe genkendelse og kontekst.",
-                "Det tydeliggøres, at shoppen nu skal forbindes til Vuuh.",
-                "En synlig CTA-knap leder brugeren direkte videre til Vuuh.",
-              ],
             },
           },
           {
@@ -332,7 +327,7 @@ const projects = [
     summary: "Redesign af Secondhand side til La Rōuge.",
     description: [
       "LA RŌUGE ønskede et koncept for et selvstændigt re-commerce subbrand, der kunne forlænge tøjets levetid og understøtte en mere cirkulær købsoplevelse. Målet var at udvikle en digital platform med sin egen identitet og stemme, samtidig med at forbindelsen til LA RŌUGEs værdier om kvalitet, self-love og tidløst design blev bevaret.",
-      "Resultatet blev RE-RŌUGE - et secondhand-univers, hvor eksisterende LA RŌUGE-produkter får nyt liv hos nye ejere.",
+      "Resultatet blev RE RŌUGE - et secondhand-univers, hvor eksisterende LA RŌUGE-produkter får nyt liv hos nye ejere.",
     ],
     tags: ["Figma", "Prototyping"],
     collaboration: ["3 personer"],
@@ -382,9 +377,9 @@ const projects = [
       {
         heading: "Målgruppe & strategi",
         paragraphs: [
-          "Vi overvejede, om RE-RŌUGE skulle henvende sig til en ny målgruppe eller bygge videre på LA RŌUGEs eksisterende kunder. Vi valgte at tage udgangspunkt i den nuværende målgruppe og i stedet øge kendskabet til secondhand-konceptet.",
+          "Vi overvejede, om RE RŌUGE skulle henvende sig til en ny målgruppe eller bygge videre på LA RŌUGEs eksisterende kunder. Vi valgte at tage udgangspunkt i den nuværende målgruppe og i stedet øge kendskabet til secondhand-konceptet.",
           "Fokus var derfor at gøre videresalg attraktivt, kommunikere fordelene ved re-commerce tydeligt og skabe en enkel og overskuelig brugeroplevelse. Gennem både online- og offline-touchpoints arbejdede vi på at gøre kunderne opmærksomme på, at deres LA RŌUGE-produkter kan få nyt liv hos en ny ejer.",
-          "Samtidig positionerede vi RE-RŌUGE som Affordable Chic - en mulighed for at få adgang til LA RŌUGEs univers til en mere tilgængelig pris.",
+          "Samtidig positionerede vi RE RŌUGE som Affordable Chic - en mulighed for at få adgang til LA RŌUGEs univers til en mere tilgængelig pris.",
         ],
       },
       {
@@ -398,7 +393,7 @@ const projects = [
             ],
             image: {
               src: `${import.meta.env.BASE_URL}rerouge/moodboard.png`,
-              alt: "Moodboard for RE-RŌUGEs visuelle retning",
+              alt: "Moodboard for RE RŌUGEs visuelle retning",
             },
           },
           {
@@ -409,18 +404,18 @@ const projects = [
             ],
             image: {
               src: `${import.meta.env.BASE_URL}rerouge/colorpalette.png`,
-              alt: "RE-RŌUGEs farvepalette med røde og varme neutrale farver",
+              alt: "RE RŌUGEs farvepalette med røde og varme neutrale farver",
             },
           },
           {
             title: "Logo",
             paragraphs: [
-              "Navnet RE-RŌUGE er inspireret af ordene re-use og rose og understøtter konceptets fokus på genbrug og cirkularitet.",
+              "Navnet RE RŌUGE er inspireret af ordene re-use og rose og understøtter konceptets fokus på genbrug og cirkularitet.",
               "Rosen fungerer som metafor for re-commerce: Ligesom en rose kan blomstre igen, kan et stykke tøj få nyt liv hos en ny ejer.",
             ],
             image: {
               src: `${import.meta.env.BASE_URL}rerouge/rerouge_label1.png`,
-              alt: "RE-RŌUGE-logo på et mørkerødt tøjmærke",
+              alt: "RE RŌUGE-logo på et mørkerødt tøjmærke",
               cover: true,
             },
           },
@@ -444,7 +439,7 @@ const projects = [
             number: "1.",
             title: "Øget synlighed gennem markedsføring",
             introduction:
-              "For at skabe større opmærksomhed omkring RE-RŌUGE udviklede vi forslag til både offline- og online-markedsføring.",
+              "For at skabe større opmærksomhed omkring RE RŌUGE udviklede vi forslag til både offline- og online-markedsføring.",
             channels: [
               {
                 title: "Flyer",
@@ -454,28 +449,28 @@ const projects = [
                 images: [
                   {
                     src: `${import.meta.env.BASE_URL}rerouge/flyer_forside.png`,
-                    alt: "Forside af RE-RŌUGE-flyer",
+                    alt: "Forside af RE RŌUGE-flyer",
                   },
                   {
                     src: `${import.meta.env.BASE_URL}rerouge/flyer_bagside.png`,
-                    alt: "Bagside af RE-RŌUGE-flyer",
+                    alt: "Bagside af RE RŌUGE-flyer",
                   },
                 ],
               },
               {
                 title: "Instagram",
                 paragraphs: [
-                  "Derudover udviklede vi et Instagram-koncept, som skulle øge kendskabet til RE-RŌUGE og kommunikere fordelene ved både køb og salg af secondhand-tøj.",
+                  "Derudover udviklede vi et Instagram-koncept, som skulle øge kendskabet til RE RŌUGE og kommunikere fordelene ved både køb og salg af secondhand-tøj.",
                 ],
                 images: [
                   {
                     src: `${import.meta.env.BASE_URL}rerouge/ig_post.png`,
-                    alt: "Instagram-opslag for RE-RŌUGE",
+                    alt: "Instagram-opslag for RE RŌUGE",
                     transparent: true,
                   },
                   {
                     src: `${import.meta.env.BASE_URL}rerouge/ig_profile.png`,
-                    alt: "Instagram-profil med RE-RŌUGEs visuelle indhold",
+                    alt: "Instagram-profil med RE RŌUGEs visuelle indhold",
                     transparent: true,
                   },
                 ],
@@ -493,7 +488,7 @@ const projects = [
             ],
             video: {
               src: `${import.meta.env.BASE_URL}rerouge/product_finder.mp4`,
-              alt: "Produktfinder til RE-RŌUGEs trade-in-flow",
+              alt: "Produktfinder til RE RŌUGEs trade-in-flow",
             },
           },
           {
@@ -507,11 +502,11 @@ const projects = [
             images: [
               {
                 src: `${import.meta.env.BASE_URL}rerouge/product_description1.png`,
-                alt: "RE-RŌUGE produkt beskrivelse",
+                alt: "RE RŌUGE produkt beskrivelse",
               },
               {
                 src: `${import.meta.env.BASE_URL}rerouge/product_description2.png`,
-                alt: "RE-RŌUGE produkt beskrivelse",
+                alt: "RE RŌUGE produkt beskrivelse",
               },
             ],
           },
@@ -520,7 +515,7 @@ const projects = [
       {
         heading: "Forretningspotentiale",
         paragraphs: [
-          "RE-RŌUGE skaber værdi for både LA RŌUGE og deres kunder. Konceptet styrker brandets position inden for cirkulær mode, øger kundeloyaliteten og holder produkterne i brandets univers længere. Samtidig får kunderne en enkel og tryg platform til køb og salg af brugt LA RŌUGE-tøj, hvilket bidrager til et mere ansvarligt forbrug og forlænger tøjets levetid.",
+          "RE RŌUGE skaber værdi for både LA RŌUGE og deres kunder. Konceptet styrker brandets position inden for cirkulær mode, øger kundeloyaliteten og holder produkterne i brandets univers længere. Samtidig får kunderne en enkel og tryg platform til køb og salg af brugt LA RŌUGE-tøj, hvilket bidrager til et mere ansvarligt forbrug og forlænger tøjets levetid.",
         ],
       },
     ],

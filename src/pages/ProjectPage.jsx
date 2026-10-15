@@ -30,48 +30,29 @@ function CaseVideo({ video }) {
 
   return (
     <div className="project-case-video-box">
-      {video.src ? (
-        <video
-          ref={videoRef}
-          className="project-case-video"
-          src={video.src}
-          poster={video.poster || undefined}
-          aria-label={video.alt}
-          autoPlay={false}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
-      ) : (
-        <div className="project-case-video-placeholder">
-          <span>Video til onboarding-flow</span>
-          <small>Tilføj en videosti i projektdataene</small>
-        </div>
-      )}
+      <video
+        ref={videoRef}
+        className="project-case-video"
+        src={video.src}
+        aria-label={video.alt}
+        autoPlay={false}
+        controls
+        muted
+        playsInline
+        preload="metadata"
+      />
     </div>
   );
 }
 
-function CaseImage({ image, index, note }) {
+function CaseImage({ image, note }) {
   return (
     <figure className="project-case-image-figure">
-      {image.src ? (
-        <img
-          className={`project-case-image${image.transparent ? " is-transparent" : ""}`}
-          src={image.src}
-          alt={image.alt}
-        />
-      ) : (
-        <div
-          className="project-case-image-placeholder"
-          role="img"
-          aria-label={image.alt}
-        >
-          <span>Billede {index + 1}</span>
-          <small>Tilføj screenshot</small>
-        </div>
-      )}
+      <img
+        className={`project-case-image${image.transparent ? " is-transparent" : ""}`}
+        src={image.src}
+        alt={image.alt}
+      />
       {note && <figcaption>{note}</figcaption>}
     </figure>
   );
@@ -95,9 +76,7 @@ function ProjectPage() {
   }
 
   return (
-    <article
-      className={`project-detail${project.slug === "RE RŌUGE" ? " project-detail-re-rouge" : ""}`}
-    >
+    <article className="project-detail">
       <Link className="project-back" to="/projects">
         ← Alle projekter
       </Link>
@@ -234,10 +213,9 @@ function ProjectPage() {
                             <div className="project-optimization-gallery">
                               {item.channels
                                 .flatMap((channel) => channel.images)
-                                .map((image, index) => (
+                                .map((image) => (
                                   <CaseImage
                                     image={image}
-                                    index={index}
                                     key={image.src || image.alt}
                                   />
                                 ))}
@@ -272,10 +250,9 @@ function ProjectPage() {
                               ))}
                             </div>
                             <div className="project-optimization-product-images">
-                              {item.images.map((image, index) => (
+                              {item.images.map((image) => (
                                 <CaseImage
                                   image={image}
-                                  index={index}
                                   key={image.src || image.alt}
                                 />
                               ))}
@@ -324,10 +301,9 @@ function ProjectPage() {
                         className="project-case-image-row project-case-image-row-onboarding"
                         aria-label="Billeder af Vuuhs oprindelige onboarding"
                       >
-                        {item.onboardingImages.map((image, index) => (
+                        {item.onboardingImages.map((image) => (
                           <CaseImage
                             image={image}
-                            index={index}
                             key={image.src || image.alt}
                           />
                         ))}
@@ -341,10 +317,9 @@ function ProjectPage() {
                         className="project-case-image-row project-case-image-row-optimization"
                         aria-label="Billeder af den optimerede Vuuh onboarding"
                       >
-                        {item.optimizationImages.map((image, index) => (
+                        {item.optimizationImages.map((image) => (
                           <CaseImage
                             image={image}
-                            index={index}
                             key={image.src || image.alt}
                             note={image.point}
                           />
@@ -361,28 +336,14 @@ function ProjectPage() {
                             <figcaption>
                               {stage === "before" ? "Før" : "Efter"}
                             </figcaption>
-                            {item.comparison[stage].src ? (
-                              <img
-                                src={item.comparison[stage].src}
-                                alt={item.comparison[stage].alt}
-                              />
-                            ) : (
-                              <div className="project-comparison-placeholder">
-                                <span>
-                                  {stage === "before"
-                                    ? "Før redesign"
-                                    : "Efter redesign"}
-                                </span>
-                                <small>Tilføj et skærmbillede i public/</small>
-                              </div>
-                            )}
+                            <img
+                              src={item.comparison[stage].src}
+                              alt={item.comparison[stage].alt}
+                            />
                           </figure>
                         ))}
                       </div>
                     )}
-                    {item.closingParagraphs?.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
                   </div>
                 ))}
                 {section.points?.length > 0 && (

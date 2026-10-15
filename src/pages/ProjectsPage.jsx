@@ -21,7 +21,7 @@ function ProjectsPage() {
         className="home-project-grid projects-grid"
         aria-label="Projektliste"
       >
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <article
             className="home-project-card"
             data-project={project.slug}

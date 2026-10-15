@@ -32,7 +32,7 @@ function HomePage() {
         </div>
 
         <div className="home-project-grid">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <article className="home-project-card" key={project.slug}>
               <Link to={`/projects/${project.slug}`}>
                 <div className="home-project-image-wrap">
