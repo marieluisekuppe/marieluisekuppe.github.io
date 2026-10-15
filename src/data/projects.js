@@ -26,7 +26,7 @@ const projects = [
     year: "2026",
     summary: "Design og udvikling af en webshop til en fiktiv tøj-retailer.",
     description:
-      "Webshop & Brand Experience: Formålet med projektet var at designe og udvikle en digital løsning, som afspejler brandets (CTRLs) identitet og skabe en sammenhængende brugeroplevelse for målgruppen. Projektet tager udgangspunkt i en målgruppeanalyse, hvor der blev anvendt segmentering, Value Proposition Canvas og desk research for at opnå en dybere forståelse af brugernes behov, adfærd og præferencer. På baggrund af disse indsigter blev der udviklet et brand med en tilhørende brandidentitet samt en interaktiv prototype i Figma. Prototypen blev efterfølgende implementeret i React med fokus på at omsætte det visuelle design og den ønskede brugeroplevelse til en funktionel digital løsning.",
+      "Webshop & Brand Experience: Formålet med projektet var at designe og udvikle en digital løsning, der afspejler CTRLs brandidentitet og skaber en sammenhængende brugeroplevelse. Gennem målgruppeanalyse, segmentering, Value Proposition Canvas og desk research blev brugernes behov og præferencer afdækket. På baggrund af indsigterne blev der udviklet en brandidentitet og en interaktiv prototype i Figma, som efterfølgende blev implementeret i React med fokus på at omsætte design og brugeroplevelse til en funktionel digital løsning.",
     tags: ["Visuel identity", "React", "Vite"],
     image: `${import.meta.env.BASE_URL}ctrl_mockup.png`,
     links: [

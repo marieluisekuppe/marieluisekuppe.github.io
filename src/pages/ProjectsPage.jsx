@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import projects from "../data/projects";
-import "../css/project-card.css";
+import "../css/projects-page.css";
 
 function ProjectsPage() {
   return (
-    <div className="page">
-      <section className="section intro">
+    <div className="projects-page">
+      <section className="projects-intro">
         <h1>Mine projekter</h1>
         <p>
           Tag et kig i nogle af de projekter som jeg har arbejdet på i løbet af
@@ -14,7 +14,7 @@ function ProjectsPage() {
         </p>
       </section>
 
-      <section className="project-grid" aria-label="Projektliste">
+      <section className="projects-grid" aria-label="Projektliste">
         {projects.map((project) => (
           <article className="project-card" key={project.slug}>
             <Link

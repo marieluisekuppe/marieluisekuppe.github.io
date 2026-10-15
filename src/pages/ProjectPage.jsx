@@ -21,7 +21,7 @@ function ProjectPage() {
   return (
     <article className="project-page">
       <Link className="back-link" to="/projects">
-        ← Tilbage til alle projekter
+        ← Alle projekter
       </Link>
       <section className="project-hero">
         <img className="detail-image" src={project.image} alt="" />
@@ -31,6 +31,19 @@ function ProjectPage() {
         <h1>{project.title}</h1>
         <p className="lead">{project.description}</p>
       </section>
+      <div className="actions">
+        {project.links.map((link) => (
+          <a
+            className="button secondary"
+            href={link.href}
+            key={link.href}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
       <section className="project-tags">
         <ul className="tag-list">
           {project.tags.map((tag) => (
@@ -88,19 +101,6 @@ function ProjectPage() {
           </section>
         </div>
       )}
-      <div className="actions">
-        {project.links.map((link) => (
-          <a
-            className="button secondary"
-            href={link.href}
-            key={link.href}
-            rel="noreferrer"
-            target="_blank"
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
     </article>
   );
 }
