@@ -270,50 +270,24 @@ p {
   transform: scale(1.1);
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+.project-page {
+  width: min(100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.project-card {
-  overflow: hidden;
-  border: 1px solid #e5ddd2;
-  border-radius: 0.75rem;
-  background: var(--beige);
+.project-hero {
+  height: calc(100svh - 120px);
+  min-height: 220px;
+  max-height: 340px;
 }
 
-.project-card img {
+.project-hero .detail-image {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
+  aspect-ratio: auto;
   object-fit: cover;
-}
-
-.project-card h2 {
-  font-family: "the-seasons", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.project-card-content {
-  padding: 1.1rem;
-}
-
-.project-card a {
-  font-family: "roboto", serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.65;
-  letter-spacing: 0;
-  color: var(--green);
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+  border-radius: 0.75rem;
 }
 
 .detail-image {

@@ -39,6 +39,52 @@ const projects = [
         href: "https://github.com/Kubraf96/customer-experience-exam-trial",
       },
     ],
+    story: {
+      challenge:
+        "CTRL havde et behov for en stærkere og mere konsistent brandoplevelse, så målgruppen kunne forstå virksomheden og føle tilknytning til den visuelle identitet.",
+      challenge2:
+        "Udfordringen lå i at skabe en tydelig retning for brandet, der kunne bruges i både visuelle kampagner og digital kommunikation uden at miste klarhed.",
+      solution:
+        "Jeg udviklede et system, der løftede brandets visuelle identitet gennem mere bevidste farvevalg, typografi og et mere fokuseret udtryk.",
+      solution2:
+        "Det gjorde virksomheden mere genkendelig, mere moderne og mere troværdig i mødet med kunderne.",
+      processTitle: "Fra brandanalyse til identitetsdesign",
+      processParagraph:
+        "Jeg arbejdede iterativt med brugerforståelse, brandpositionering og visuelle koncepter for at finde den mest gældende løsning for CTRL.",
+      cards: [
+        {
+          number: "01",
+          title: "Analyse",
+          text: "Jeg undersøgte målgruppen og brandets tone for at skabe en identitet, der passede til den ønskede oplevelse.",
+        },
+        {
+          number: "02",
+          title: "Koncept",
+          text: "Derefter udviklede jeg et konsistent designsystem, der kunne bruges i både web og sociale medier.",
+        },
+        {
+          number: "03",
+          title: "Refining",
+          text: "Til sidst finjusterede jeg detaljerne for at sikre, at brandet føltes mere sammenhængende og professionelt.",
+        },
+      ],
+      optimizationTitle: "Tydelig identitet skaber genkendelighed",
+      optimizationParagraph1:
+        "Det vigtigste var at skabe en mere klar og stærk visuel fortællling, så virksomheden kunne skille sig ud i et uoverskueligt marked.",
+      optimizationParagraph2:
+        "Designet blev mere fokuseret og konsekvent, hvilket gjorde det lettere for kunderne at forstå brandets værdi og udtryk.",
+      reflectionTitle: "Et brand skal kunne fortælle sin historie hurtigt",
+      reflectionParagraph1:
+        "CTRL viste, hvor vigtigt det er, at et brand har et tydeligt visuelt sprog, der hurtigt kan oversættes til forskellige medier.",
+      reflectionParagraph2:
+        "Når identiteten er tydelig og målrettet, bliver den både lettere at genkende, lettere at bruge og mere meningsfuld for målgruppen.",
+      checklist: [
+        "Målgruppestyring",
+        "Brandtone",
+        "Visuel struktur",
+        "Konsekvent kommunikation",
+      ],
+    },
   },
 
   {

@@ -19,22 +19,75 @@ function ProjectPage() {
   }
 
   return (
-    <article className="page narrow">
+    <article className="project-page">
       <Link className="back-link" to="/projects">
         ← Tilbage til alle projekter
       </Link>
+      <section className="project-hero">
+        <img className="detail-image" src={project.image} alt="" />
+      </section>{" "}
+      <section>
+        <p className="eyebrow">{project.year}</p>
+        <h1>{project.title}</h1>
+        <p className="lead">{project.description}</p>
+      </section>
+      <section className="project-tags">
+        <ul className="tag-list">
+          {project.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
+      </section>
+      {project.story && (
+        <div className="project-story">
+          <section className="project-story-intro">
+            <div>
+              <p className="eyebrow">Udfordringen</p>
+              <p>{project.story.challenge}</p>
+              <p>{project.story.challenge2}</p>
+            </div>
+            <div>
+              <p className="eyebrow">Løsningen</p>
+              <p>{project.story.solution}</p>
+              <p>{project.story.solution2}</p>
+            </div>
+          </section>
 
-      <img className="detail-image" src={project.image} alt="" />
-      <p className="eyebrow">{project.year}</p>
-      <h1>{project.title}</h1>
-      <p className="lead">{project.description}</p>
+          <section className="project-story-process">
+            <p className="eyebrow">Processen</p>
+            <h2>{project.story.processTitle}</h2>
+            <p>{project.story.processParagraph}</p>
+            <div className="project-story-cards">
+              {project.story.cards.map((card) => (
+                <article key={card.number}>
+                  <span>{card.number}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
 
-      <ul className="tag-list">
-        {project.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
+          <section className="project-story-optimization">
+            <p className="eyebrow">Optimering</p>
+            <h2>{project.story.optimizationTitle}</h2>
+            <p>{project.story.optimizationParagraph1}</p>
+            <p>{project.story.optimizationParagraph2}</p>
+            <ul className="tag-list">
+              {project.story.checklist.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
 
+          <section className="project-story-reflection">
+            <p className="eyebrow">Refleksion</p>
+            <h2>{project.story.reflectionTitle}</h2>
+            <p>{project.story.reflectionParagraph1}</p>
+            <p>{project.story.reflectionParagraph2}</p>
+          </section>
+        </div>
+      )}
       <div className="actions">
         {project.links.map((link) => (
           <a
