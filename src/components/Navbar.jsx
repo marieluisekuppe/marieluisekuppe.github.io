@@ -3,18 +3,20 @@ import { NavLink } from "react-router";
 function Navbar() {
   return (
     <header className="site-header">
-      <NavLink className="brand" to="/">
-        <img src="./logo2.svg" alt="Logo" />
-      </NavLink>
-
-      <nav className="site-nav" aria-label="Primær navigation">
-        <NavLink to="/" end>
-          Forside
+      <div className="site-header-inner">
+        <NavLink className="brand" to="/">
+          Marie-Luise Kuppe
         </NavLink>
-        <NavLink to="/projects">Portfolio</NavLink>
-        <NavLink to="/about">Om mig</NavLink>
-        <NavLink to="/contact">Kontakt</NavLink>
-      </nav>
+
+        <nav className="site-nav" aria-label="Primær navigation">
+          <NavLink to="/" end>
+            Forside
+          </NavLink>
+          <NavLink to="/projects">Portfolio</NavLink>
+          <NavLink to="/about">Om mig</NavLink>
+          <NavLink to="/contact">Kontakt</NavLink>
+        </nav>
+      </div>
     </header>
   );
 }

@@ -1,0 +1,136 @@
+.home-projects {
+  padding: 3rem 0 5rem;
+}
+
+.home-projects-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.home-projects-heading h2,
+.home-projects-heading a {
+  margin: 0;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.home-projects-heading a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-projects-heading a span {
+  font-size: 1rem;
+  transition: transform 160ms ease;
+}
+
+.home-projects-heading a:hover span {
+  transform: translateX(4px);
+}
+
+.home-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  background: var(--beige);
+}
+
+.home-project-card {
+  min-width: 0;
+  border: 1px solid var(--border-hover);
+  background: var(--beige);
+}
+
+.home-project-card > a {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-project-card > a:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid var(--green);
+  outline-offset: -3px;
+}
+
+.home-project-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.08 / 1;
+}
+
+.home-project-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.home-project-card > a:hover .home-project-image-wrap img {
+  transform: scale(1.025);
+}
+
+.home-project-caption {
+  display: flex;
+  min-height: 5.5rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.25rem 1.1rem;
+  color: #788980;
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.home-project-caption h3 {
+  margin: 0 0 0.35rem;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.home-project-caption p {
+  margin: 0;
+  color: var(--green-hover);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 800px) {
+  .home-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .home-projects {
+    padding: 2rem 0 3rem;
+  }
+
+  .home-project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-project-image-wrap {
+    aspect-ratio: 1.2 / 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-project-image-wrap img,
+  .home-projects-heading a span {
+    transition: none;
+  }
+}

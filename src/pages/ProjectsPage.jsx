@@ -1,35 +1,44 @@
 import { Link } from "react-router";
 import projects from "../data/projects";
+import "../css/projects-page.css";
+import "../css/home-projects.css";
 
 function ProjectsPage() {
   return (
-    <div className="page">
-      <section className="section intro">
+    <div className="projects-page">
+      <section className="projects-intro">
         <h1>Mine projekter</h1>
         <p>
-          Tag et kig i nogle af de projekter som jeg har arbejdet på i løbet af
-          min uddannelse. Her kan du læse om de forskellige projekter, se
-          billeder og finde links til live sites og GitHub repositories.
+          Her finder du et udvalg af projekter som jeg har arbejdet med i løbet
+          af min uddannelse som multimediedesigner.
+        </p>
+        <p>
+          Find et udvalg af produkt optimeringer, koncept udvikling og mere.
         </p>
       </section>
 
-      <section className="project-grid" aria-label="Projektliste">
-        {projects.map((project) => (
-          <article className="project-card" key={project.slug}>
-            <img src={project.image} alt={`Preview af ${project.title}`} />
-            <div className="project-card-content">
-              <p className="eyebrow">{project.year}</p>
-              <h2>{project.title}</h2>
-              <p>{project.summary}</p>
-              <ul className="tag-list">
-                {project.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-              <Link to={`/projects/${project.slug}`}>
-                Læs mere om projektet
-              </Link>
-            </div>
+      <section
+        className="home-project-grid projects-grid"
+        aria-label="Projektliste"
+      >
+        {projects.map((project, index) => (
+          <article
+            className="home-project-card"
+            data-project={project.slug}
+            key={project.slug}
+          >
+            <Link to={`/projects/${project.slug}`}>
+              <div className="home-project-image-wrap">
+                <img
+                  src={project.image}
+                  alt={`Visuelt materiale fra ${project.title}`}
+                />
+              </div>
+              <div className="home-project-caption">
+                <h3>{project.title}</h3>
+                <p>{project.tags[0]}</p>
+              </div>
+            </Link>
           </article>
         ))}
       </section>
