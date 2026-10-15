@@ -3,6 +3,8 @@
   --project-ink: #354f41;
   --project-muted: #16211b;
   --project-accent: #788980;
+  --re-rouge: #6b1e2e;
+  --vuuh: #2f2747;
   background: var(--project-surface);
 }
 
@@ -201,7 +203,7 @@
 .project-optimization-trade-in {
   margin-inline: clamp(1rem, 10vw, 10rem);
   padding: clamp(1.25rem, 3vw, 2.5rem);
-  background: #6b1e2e;
+  background: var(--re-rouge);
   color: var(--beige);
 }
 
@@ -368,6 +370,28 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
+  color: var(--project-surface);
+}
+.project-issue-grid-re-rouge .project-issue-card {
+  background-color: var(--re-rouge);
+  color: var(--project-surface);
+}
+
+.project-issue-grid-re-rouge .project-issue-card > span,
+.project-issue-grid-re-rouge .project-issue-card h3,
+.project-issue-grid-re-rouge .project-issue-card p {
+  color: var(--project-surface);
+}
+
+.project-issue-grid-vuuh-highlight .project-issue-card {
+  background-color: var(--vuuh);
+  color: var(--project-surface);
+}
+
+.project-issue-grid-vuuh-highlight .project-issue-card > span,
+.project-issue-grid-vuuh-highlight .project-issue-card h3,
+.project-issue-grid-vuuh-highlight .project-issue-card p {
+  color: var(--project-surface);
 }
 
 .project-issue-card {

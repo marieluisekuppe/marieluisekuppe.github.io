@@ -195,7 +195,7 @@ function ProjectPage() {
                 {section.subheading && <h3>{section.subheading}</h3>}
                 {section.issueCards?.length > 0 && (
                   <div
-                    className={`project-issue-grid${project.slug === "RE RŌUGE" ? " project-issue-grid-re-rouge" : ""}`}
+                    className={`project-issue-grid${project.slug === "RE RŌUGE" ? " project-issue-grid-re-rouge" : ""}${project.slug === "Vuuh" && ["De 4 centrale udfordringer", "De primære forbedringer er:"].includes(section.subheading) ? " project-issue-grid-vuuh-highlight" : ""}`}
                   >
                     {section.issueCards.map((card) => (
                       <article className="project-issue-card" key={card.number}>
