@@ -7,6 +7,9 @@ const projects = [
     description:
       "Web Application: 2GATHER er en event app, hvis formål er, at gøre det nemmere for brugere at opdage og finde lokale aktiviteter og events, da alt det er samlet et sted; nemlig i 2GATHER.",
     tags: ["Koncept udvikling", "CRUD", "React"],
+    collaboration: ["3 personer"],
+    role: ["User Research"],
+    duration: ["10 uger"],
     image: `${import.meta.env.BASE_URL}2gather.png`,
     links: [
       {
@@ -28,6 +31,10 @@ const projects = [
     description:
       "Webshop & Brand Experience: Formålet med projektet var at designe og udvikle en digital løsning, der afspejler CTRLs brandidentitet og skaber en sammenhængende brugeroplevelse. Gennem målgruppeanalyse, segmentering, Value Proposition Canvas og desk research blev brugernes behov og præferencer afdækket. På baggrund af indsigterne blev der udviklet en brandidentitet og en interaktiv prototype i Figma, som efterfølgende blev implementeret i React med fokus på at omsætte design og brugeroplevelse til en funktionel digital løsning.",
     tags: ["Visuel identity", "React", "Vite"],
+    collaboration: ["5 personer"],
+    role: ["User Research"],
+    duration: ["10 uger"],
+
     image: `${import.meta.env.BASE_URL}ctrl_mockup.png`,
     links: [
       {
@@ -75,15 +82,8 @@ const projects = [
         "Designet blev mere fokuseret og konsekvent, hvilket gjorde det lettere for kunderne at forstå brandets værdi og udtryk.",
       reflectionTitle: "Et brand skal kunne fortælle sin historie hurtigt",
       reflectionParagraph1:
-        "CTRL viste, hvor vigtigt det er, at et brand har et tydeligt visuelt sprog, der hurtigt kan oversættes til forskellige medier.",
-      reflectionParagraph2:
-        "Når identiteten er tydelig og målrettet, bliver den både lettere at genkende, lettere at bruge og mere meningsfuld for målgruppen.",
-      checklist: [
-        "Målgruppestyring",
-        "Brandtone",
-        "Visuel struktur",
-        "Konsekvent kommunikation",
-      ],
+        "CTRL viste, hvor vigtigt det er, at et brand har et tydeligt visuelt sprog, der hurtigt kan oversættes til forskellige medier. Når identiteten er tydelig og målrettet, bliver den både lettere at genkende, lettere at bruge og mere meningsfuld for målgruppen.",
+      checklist: ["Målgruppestyring", "Brandtone", "Visuel struktur"],
     },
   },
 
@@ -96,6 +96,10 @@ const projects = [
     description:
       "Arbejdet bestod i, at vi i grupper skulle designe og udvikle en mobiltilpasset ny spiloversigt samt detaljeside i Figma med filtreringsmuligheder samt detaljeside til Spilcaféen.dk. Derefter skulle vi kode løsningen i HTML, CSS og JavaScript, hvor spillelisten og dens data blev hentet fra en ekstern JSON‑fil.",
     tags: ["Design", "Frontend", "Proces"],
+    collaboration: ["Individuelt"],
+    role: ["Ikke angivet"],
+    duration: ["10 uger"],
+
     image: `${import.meta.env.BASE_URL}spilcafeen_mockup.png`,
     links: [
       {
@@ -116,6 +120,10 @@ const projects = [
     summary: "Redesign af fiktiv website til Mellemrum.",
     description: "Beskrivelse her",
     tags: ["Design", "Frontend", "Proces"],
+    collaboration: ["Individuelt"],
+    role: ["Optimering"],
+    duration: ["2 uger"],
+
     image: `${import.meta.env.BASE_URL}`,
     links: [
       {
@@ -133,18 +141,45 @@ const projects = [
     title: "VUUH",
     year: "2026",
     summary: "Redesign af Onboarding til Vuuh.",
-    description: "Beskrivelse her",
-    tags: ["Design", "Frontend", "Proces"],
+    description:
+      "Vuuh ønskede at skabe en mere problemfri selvbetjeningsoplevelse for nye brugere, der opretter en konto og konfigurerer platformen. Målet var at sikre, at brugerne kunne gennemføre onboarding-processen selvstændigt uden behov for support.",
+    tags: ["UX-Audit", "Onboarding", "Figma"],
+    collaboration: ["3 personer"],
+    role: ["Optimering"],
+    duration: ["2 uger"],
+
     image: `${import.meta.env.BASE_URL}`,
     links: [
       {
-        label: "Live Site",
-        href: "https://marieluisekuppe.github.io/ixd_eksamen_spilcafe/",
+        label: "Se løsning",
+        href: "https://www.figma.com/proto/MeZ6V3TVoAOar2gzLS52rb/Case-2---Vuuh?node-id=187-1116&t=Ly4cCxXbtYRwrQnA-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=187%3A1116&page-id=102%3A2439",
+      },
+    ],
+    caseSections: [
+      {
+        heading: "Opgave",
+        paragraphs: [
+          "Vuuh ønskede at skabe en mere problemfri selvbetjeningsoplevelse for nye brugere, der opretter en konto og konfigurerer platformen. Målet var at sikre, at brugerne kunne gennemføre onboarding-processen selvstændigt uden behov for support.",
+        ],
       },
       {
-        label: "GitHub repo",
-        href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+        heading: "Undersøgelse og prioritering",
+        paragraphs: [
+          "Gennem en heuristisk evaluering og en UX-audit af onboarding-flowet identificerede vi flere steder, hvor brugeren manglede feedback og vejledning til den næste handling. Analysen viste, at brugerne flere steder i onboarding-processen blev efterladt uden tydelig vejledning.",
+        ],
       },
+      {
+        heading: "Optimering",
+        points: [
+          "Opsætning af en testordre",
+          "Utydelig succes-side",
+          "Uklare næste skridt efter udfyldelse af formularen",
+          "Vejen til Connect to Shopify",
+        ],
+      },
+      { heading: "Resultater", paragraphs: [] },
+      { heading: "Faglig refleksion", paragraphs: [] },
+      { heading: "Forretningspotentiale", paragraphs: [] },
     ],
   },
   {
@@ -154,6 +189,10 @@ const projects = [
     summary: "Redesign af Secondhand side til La Rōuge.",
     description: "Beskrivelse her",
     tags: ["Design", "Frontend", "Proces"],
+    collaboration: ["3 personer"],
+    role: ["Optimering"],
+    duration: ["2 uger"],
+
     image: `${import.meta.env.BASE_URL}`,
     links: [
       {
