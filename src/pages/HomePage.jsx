@@ -54,10 +54,10 @@ function HomePage() {
       <section className="section contact-section">
         <div className="contact-box">
           <div>
-            <h3>Mangler I en praktikant, med interesse</h3>
+            <h3>Mangler I en praktikant, med interesse indenfor </h3>
             <h3>
-              indenfor <strong>UX/UI</strong> og{" "}
-              <strong>frontend-udvikling</strong>?
+              {" "}
+              <strong>UX/UI</strong> og <strong>frontend-udvikling</strong>?
             </h3>
           </div>
           <h3>
