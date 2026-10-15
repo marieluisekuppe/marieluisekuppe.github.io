@@ -148,7 +148,7 @@ const projects = [
     role: ["Optimering"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}`,
+    image: `${import.meta.env.BASE_URL}vuuh/vuuh_logo.svg`,
     links: [
       {
         label: "Se løsning",
@@ -231,7 +231,7 @@ const projects = [
               { src: "", alt: "Screenshot af Vuuh onboarding trin 3" },
             ],
             followupParagraphs: [
-              "For at skabe et mere sammenhængende flow blev onboarding-processen redesignet ud fra Guided Steps-princippet. Dette indebar:",
+              "For at skabe et mere sammenhængende flow blev onboarding-processen redesignet ud fra Guided Steps-princippet:",
             ],
             optimizationImages: [
               {
@@ -276,13 +276,26 @@ const projects = [
         heading: "Resultater",
         paragraphs: [
           "De foreslåede forbedringer skal bidrage til et mere sammenhængende onboarding-flow, hvor brugeren guides gennem opsætningen trin for trin. Ved at eliminere standstill-situationer og tilføre tydelige call-to-actions bliver brugerrejsen mere selvforklarende.",
-          "De primære forbedringer er:",
         ],
-        points: [
-          "Færre unødvendige klik og sideskift.",
-          "Klar kommunikation om næste handling.",
-          "Tydelig feedback efter gennemførte handlinger.",
-          "En onboarding-proces, der i højere grad kan gennemføres uden support.",
+        subheading: "De primære forbedringer er:",
+        issueCards: [
+          {
+            number: "01",
+            title: "Færre unødvendige klik og sideskift",
+          },
+          {
+            number: "02",
+            title: "Klar kommunikation om næste handling",
+          },
+          {
+            number: "03",
+            title: "Tydelig feedback efter gennemførte handlinger",
+          },
+          {
+            number: "04",
+            title:
+              "En onboarding-process, der i højere grad kan gennemføres uden support",
+          },
         ],
       },
       {

@@ -16,7 +16,11 @@ function ProjectsPage() {
 
       <section className="projects-grid" aria-label="Projektliste">
         {projects.map((project) => (
-          <article className="project-card" key={project.slug}>
+          <article
+            className="project-card"
+            data-project={project.slug}
+            key={project.slug}
+          >
             <Link
               className="project-card-link"
               to={`/projects/${project.slug}`}
