@@ -8,8 +8,7 @@
 
 .project-back {
   display: flex;
-  width: min(calc(100% - 8rem), 1600px);
-  margin: 1.5rem auto 0;
+  margin: 1.5rem 8rem 0;
   color: #595650;
   font-family: "roboto", sans-serif;
   font-size: 1rem;
@@ -28,8 +27,8 @@
 
 .project-hero-inner {
   display: grid;
-  width: min(calc(100% - 8rem), 1600px);
-  margin: 0 auto;
+  width: calc(100% - 16rem);
+  margin: 0 8rem;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
   align-items: start;
   gap: clamp(3rem, 7vw, 8rem);
@@ -464,6 +463,9 @@
 
 @media (max-width: 900px) {
   .project-hero-inner {
+    width: calc(100% - 4rem);
+    margin-right: 2rem;
+    margin-left: 2rem;
     min-height: auto;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
     gap: 2rem;
@@ -492,6 +494,12 @@
   .project-hero-inner,
   .project-body {
     width: calc(100% - 2rem);
+  }
+
+  .project-back,
+  .project-hero-inner {
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .project-hero {

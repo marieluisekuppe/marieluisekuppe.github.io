@@ -46,18 +46,27 @@ textarea {
 
 /* header styling */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 1px solid #354f41;
+  background: var(--beige);
+}
+
+.site-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: min(100% - 2rem, 1120px);
-  margin: 0 auto;
-  padding: 1.25rem 0;
+  margin: 0 8rem;
+  padding: 1.5rem 0;
 }
 
 .brand {
   color: var(--green);
   font-weight: 700;
+  font-size: 1.35rem;
   text-decoration: none;
 }
 
@@ -73,6 +82,7 @@ textarea {
   justify-content: flex-end;
   gap: 1.5rem;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .site-nav a {
@@ -341,8 +351,13 @@ p {
 .contact-box {
   border: transparent;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
+  gap: 20rem;
+}
+
+.contact-box > * {
+  min-width: 0;
 }
 
 .contact-box h2 {
@@ -359,12 +374,16 @@ p {
 }
 
 .contact-box h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--green);
   font-weight: 400;
   margin: 0;
-  margin-left: -18rem;
-  white-space: nowrap;
+  line-height: 1.25;
+}
+
+.contact-box > h3 {
+  width: 100%;
+  text-align: center;
 }
 
 .contact-box h3 a {
@@ -510,9 +529,11 @@ p {
 }
 
 @media (max-width: 900px) {
-  .site-header {
+  .site-header-inner {
     align-items: flex-start;
     flex-direction: column;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
   .site-nav {
@@ -550,5 +571,12 @@ p {
 
   .footer-container {
     text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .site-header-inner {
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
