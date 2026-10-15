@@ -157,29 +157,146 @@ const projects = [
     ],
     caseSections: [
       {
-        heading: "Opgave",
-        paragraphs: [
-          "Vuuh ønskede at skabe en mere problemfri selvbetjeningsoplevelse for nye brugere, der opretter en konto og konfigurerer platformen. Målet var at sikre, at brugerne kunne gennemføre onboarding-processen selvstændigt uden behov for support.",
-        ],
-      },
-      {
         heading: "Undersøgelse og prioritering",
         paragraphs: [
-          "Gennem en heuristisk evaluering og en UX-audit af onboarding-flowet identificerede vi flere steder, hvor brugeren manglede feedback og vejledning til den næste handling. Analysen viste, at brugerne flere steder i onboarding-processen blev efterladt uden tydelig vejledning.",
+          "Mange brugere falder fra tidligt i deres rejse på Vuuh, fordi onboardingforløbet opleves som komplekst og uoverskueligt. Gennem en UX-audit analyserede vi den eksisterende onboarding og identificerede fire centrale udfordringer, der påvirkede brugeroplevelsen.",
+        ],
+        subheading: "De 4 centrale udfordringer",
+        issueCards: [
+          {
+            number: "01",
+            title: "Opsætning af test ordre",
+            description:
+              "Brugerne blev ikke guidet til at gennemføre en testordre, hvilket skabte usikkerhed om, hvorvidt opsætningen var fuldført korrekt.",
+          },
+          {
+            number: "02",
+            title: "Success-side",
+            description: "Brugerne manglede tydelig guidance til næste step.",
+          },
+          {
+            number: "03",
+            title: "Uklar næste skridt efter udfyldelse af formularen.",
+            description:
+              "Brugeren blev sendt til en succes-side uden tydelig vejledning om næste trin.",
+          },
+          {
+            number: "04",
+            title: "Connect to Shopify",
+            description: "Kompleks navigation at forbinde med Shopify.",
+          },
         ],
       },
       {
         heading: "Optimering",
-        points: [
-          "Opsætning af en testordre",
-          "Utydelig succes-side",
-          "Uklare næste skridt efter udfyldelse af formularen",
-          "Vejen til Connect to Shopify",
+        paragraphs: [],
+        items: [
+          {
+            heading: "1. Optimering af succes-siden",
+            paragraphs: [
+              "Undersøgelsen viste, at brugerne blev efterladt på en succes-side uden tydelige instruktioner.",
+              "For at løse dette blev succes-siden redesignet med fokus på tydelig handling og feedback:",
+            ],
+            comparison: {
+              before: {
+                src: `${import.meta.env.BASE_URL}vuuh/succes_gammel.png`,
+                alt: "Vuuhs succes-side før redesign",
+              },
+              after: {
+                src: `${import.meta.env.BASE_URL}vuuh/succes_ny.png`,
+                alt: "Vuuhs redesignede succes-side",
+              },
+              annotations: [
+                "Brugerens shopnavn fremhæves for at skabe genkendelse og kontekst.",
+                "Det tydeliggøres, at shoppen nu skal forbindes til Vuuh.",
+                "En synlig CTA-knap leder brugeren direkte videre til Vuuh.",
+              ],
+            },
+          },
+          {
+            heading: "2. Connect to Shopify",
+            paragraphs: [
+              'Vuuhs løsning sender brugeren videre til en side med unødvendige valgmuligheder efter klik på "Connect to Shopify". Dette skaber usikkerhed og øger risikoen for frafald.',
+              "Flowet blev derfor forenklet, så brugeren sendes direkte til den relevante formular. Resultatet er en mere intuitiv onboarding med færre klik og et tydeligere fokus på den næste handling.",
+            ],
+          },
+          {
+            heading: "3. Uklare næste skridt efter udfyldelse af formularen",
+            paragraphs: [
+              'Knappen "Start Free Trial" i Vuuhs løsning gav indtryk af, at brugeren havde gennemført hele processen. Efterfølgende blev brugeren dog sendt til en tom succes-side uden vejledning, hvilket skabte usikkerhed om den næste handling.',
+            ],
+            onboardingImages: [
+              { src: "", alt: "Screenshot af Vuuh onboarding trin 1" },
+              { src: "", alt: "Screenshot af Vuuh onboarding trin 2" },
+              { src: "", alt: "Screenshot af Vuuh onboarding trin 3" },
+            ],
+            followupParagraphs: [
+              "For at skabe et mere sammenhængende flow blev onboarding-processen redesignet ud fra Guided Steps-princippet. Dette indebar:",
+            ],
+            optimizationImages: [
+              {
+                src: "",
+                alt: "Optimeret Vuuh onboarding med tydelig næste handling",
+                point:
+                  "Tydelig information om den næste handling efter formularindsendelse.",
+              },
+              {
+                src: "",
+                alt: "Optimeret Vuuh onboarding med CTA til næste trin",
+                point: "En CTA, der leder brugeren videre til næste trin.",
+              },
+              {
+                src: "",
+                alt: "Optimeret Vuuh onboarding med bekræftelses-overlay",
+                point:
+                  "Et enkelt bekræftelses-overlay i stedet for endnu en kompleks side.",
+              },
+            ],
+          },
+          {
+            heading: "4. Opsætning af en testordre",
+            paragraphs: [
+              "Ved gennemgangen af Vuuhs løsning identificerede vi, at brugerne ikke blev vejledt til at gennemføre den nødvendige testordre. Uden denne handling kunne hverken brugeren eller Vuuh vide, om systemet var opsat korrekt. Brugeren opnåede derfor heller ikke en tydelig succesoplevelse.",
+              "For at løse dette blev der introduceret et wizard-baseret onboarding-flow:",
+            ],
+            points: [
+              "Hvert trin forklares enkelt og konkret.",
+              'Brugeren guides videre via "GOT IT!"-handlinger.',
+              "Irrelevante informationer skjules, så fokus fastholdes på den aktuelle opgave.",
+              "En loading-tilstand skaber tryghed og forklarer, at der kun er tale om en testordre.",
+              'Flowet afsluttes med en tydelig succesbesked: "Order Successfully Downloaded".',
+            ],
+            closingParagraphs: [
+              "De guidede trin reducerer den kognitive belastning og gør processen lettere at gennemføre for brugere, der har behov for ekstra støtte og vejledning.",
+            ],
+          },
         ],
       },
-      { heading: "Resultater", paragraphs: [] },
-      { heading: "Faglig refleksion", paragraphs: [] },
-      { heading: "Forretningspotentiale", paragraphs: [] },
+      {
+        heading: "Resultater",
+        paragraphs: [
+          "De foreslåede forbedringer skal bidrage til et mere sammenhængende onboarding-flow, hvor brugeren guides gennem opsætningen trin for trin. Ved at eliminere standstill-situationer og tilføre tydelige call-to-actions bliver brugerrejsen mere selvforklarende.",
+          "De primære forbedringer er:",
+        ],
+        points: [
+          "Færre unødvendige klik og sideskift.",
+          "Klar kommunikation om næste handling.",
+          "Tydelig feedback efter gennemførte handlinger.",
+          "En onboarding-proces, der i højere grad kan gennemføres uden support.",
+        ],
+      },
+      {
+        heading: "Faglig refleksion",
+        paragraphs: [
+          "Projektet viste, hvor stor betydning selv små UX-barrierer kan have for både brugeroplevelsen og forretningen. Et centralt valg var at fokusere på forenkling frem for flere funktioner, så brugeren altid møder den rette information på det rette tidspunkt.",
+        ],
+      },
+      {
+        heading: "Forretningspotentiale",
+        paragraphs: [
+          "Ved at skabe en mere guidet onboardingoplevelse kan Vuuh reducere frafald, øge antallet af succesfulde opsætninger og gøre produktet mere selvbetjent. En tydeligere proces sikrer, at brugerne hurtigere opnår værdi og gennemfører alle nødvendige trin uden behov for support.",
+        ],
+      },
     ],
   },
   {

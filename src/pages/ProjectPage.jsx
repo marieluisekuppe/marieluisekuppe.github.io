@@ -2,6 +2,26 @@ import { Link, useParams } from "react-router";
 import projects from "../data/projects";
 import "../css/project-detail.css";
 
+function CaseImage({ image, index, note }) {
+  return (
+    <figure className="project-case-image-figure">
+      {image.src ? (
+        <img className="project-case-image" src={image.src} alt={image.alt} />
+      ) : (
+        <div
+          className="project-case-image-placeholder"
+          role="img"
+          aria-label={image.alt}
+        >
+          <span>Billede {index + 1}</span>
+          <small>Tilføj screenshot</small>
+        </div>
+      )}
+      {note && <figcaption>{note}</figcaption>}
+    </figure>
+  );
+}
+
 function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
@@ -84,6 +104,97 @@ function ProjectPage() {
                 <h2>{section.heading}</h2>
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
+                ))}
+                {section.subheading && <h3>{section.subheading}</h3>}
+                {section.issueCards?.length > 0 && (
+                  <div className="project-issue-grid">
+                    {section.issueCards.map((card) => (
+                      <article className="project-issue-card" key={card.number}>
+                        <span>{card.number}</span>
+                        <h3>{card.title}</h3>
+                        <p>{card.description}</p>
+                      </article>
+                    ))}
+                  </div>
+                )}
+                {section.items?.map((item) => (
+                  <div className="project-case-item" key={item.heading}>
+                    <h3>{item.heading}</h3>
+                    {item.paragraphs?.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                    {item.points?.length > 0 && (
+                      <ul className="project-case-points">
+                        {item.points.map((point) => (
+                          <li key={point}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {item.onboardingImages?.length > 0 && (
+                      <div
+                        className="project-case-image-row"
+                        aria-label="Billeder af Vuuhs oprindelige onboarding"
+                      >
+                        {item.onboardingImages.map((image, index) => (
+                          <CaseImage
+                            image={image}
+                            index={index}
+                            key={image.src || image.alt}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {item.followupParagraphs?.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                    {item.optimizationImages?.length > 0 && (
+                      <div
+                        className="project-case-image-row"
+                        aria-label="Billeder af den optimerede Vuuh onboarding"
+                      >
+                        {item.optimizationImages.map((image, index) => (
+                          <CaseImage
+                            image={image}
+                            index={index}
+                            key={image.src || image.alt}
+                            note={image.point}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {item.comparison && (
+                      <div className="project-comparison">
+                        {["before", "after"].map((stage) => (
+                          <figure
+                            className="project-comparison-figure"
+                            key={stage}
+                          >
+                            <figcaption>
+                              {stage === "before" ? "Før" : "Efter"}
+                            </figcaption>
+                            {item.comparison[stage].src ? (
+                              <img
+                                src={item.comparison[stage].src}
+                                alt={item.comparison[stage].alt}
+                              />
+                            ) : (
+                              <div className="project-comparison-placeholder">
+                                <span>
+                                  {stage === "before"
+                                    ? "Før redesign"
+                                    : "Efter redesign"}
+                                </span>
+                                <small>Tilføj et skærmbillede i public/</small>
+                              </div>
+                            )}
+                          </figure>
+                        ))}
+                      </div>
+                    )}
+                    {item.closingParagraphs?.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
                 ))}
                 {section.points?.length > 0 && (
                   <ol className="project-case-points">
