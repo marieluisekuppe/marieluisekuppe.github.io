@@ -148,7 +148,7 @@ const projects = [
     role: ["Optimering"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}vuuh/vuuh_logo.svg`,
+    image: `${import.meta.env.BASE_URL}vuuh/vuuh_logo1.svg`,
     links: [
       {
         label: "Se løsning",
@@ -210,11 +210,6 @@ const projects = [
                 src: `${import.meta.env.BASE_URL}vuuh/succes_ny.png`,
                 alt: "Vuuhs redesignede succes-side",
               },
-              annotations: [
-                "Brugerens shopnavn fremhæves for at skabe genkendelse og kontekst.",
-                "Det tydeliggøres, at shoppen nu skal forbindes til Vuuh.",
-                "En synlig CTA-knap leder brugeren direkte videre til Vuuh.",
-              ],
             },
           },
           {
@@ -326,25 +321,202 @@ const projects = [
     ],
   },
   {
-    slug: "La Rōuge",
-    title: "LA ROUGE",
+    slug: "RE RŌUGE",
+    title: "RE ROUGE",
     year: "2026",
     summary: "Redesign af Secondhand side til La Rōuge.",
-    description: "Beskrivelse her",
-    tags: ["Design", "Frontend", "Proces"],
+    description: [
+      "LA RŌUGE ønskede et koncept for et selvstændigt re-commerce subbrand, der kunne forlænge tøjets levetid og understøtte en mere cirkulær købsoplevelse. Målet var at udvikle en digital platform med sin egen identitet og stemme, samtidig med at forbindelsen til LA RŌUGEs værdier om kvalitet, self-love og tidløst design blev bevaret.",
+      "Resultatet blev RE RŌUGE - et secondhand-univers, hvor eksisterende LA RŌUGE-produkter får nyt liv hos nye ejere.",
+    ],
+    tags: ["Figma", "Prototyping"],
     collaboration: ["3 personer"],
-    role: ["Optimering"],
+    role: ["UX/UI Design", "Konceptudvikling", "Brandstrategi"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}`,
+    image: `${import.meta.env.BASE_URL}rerouge/rerouge_label1.png`,
     links: [
       {
-        label: "Live Site",
-        href: "https://marieluisekuppe.github.io/ixd_eksamen_spilcafe/",
+        label: "Se prototype",
+        href: "https://www.figma.com/proto/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=1296-2558&t=TUsgcydDlXm4zZXC-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1296%3A2558&show-proto-sidebar=1&page-id=44%3A47",
+      },
+
+      {
+        label: "Branddeck",
+        href: "https://www.figma.com/design/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=1487-1323",
+      },
+    ],
+    caseSections: [
+      {
+        heading: "Udfordring",
+        paragraphs: [
+          "Gennem en heuristisk evaluering af LA RŌUGEs eksisterende secondhand-løsning identificerede vi tre centrale udfordringer.",
+        ],
+        subheading: "De 3 centrale udfordringer",
+        issueCards: [
+          {
+            number: "01",
+            title: "Lav synlighed",
+            description:
+              "Secondhand-konceptet blev ikke aktivt promoveret, hvilket gjorde det svært for kunderne at opdage og forstå tilbuddet.",
+          },
+          {
+            number: "02",
+            title: "Friktion i salgsflowet",
+            description:
+              "Brugerne skulle have adgang til et ordrenummer eller en kvittering for at kunne indsende varer til videresalg, hvilket skabte unødige barrierer i processen.",
+          },
+          {
+            number: "03",
+            title: "Begrænset produktinformation",
+            description:
+              "Produkterne blev kun vist med originale billeder og generelle standbeskrivelser, hvilket gjorde det svært at vurdere den reelle stand.",
+          },
+        ],
       },
       {
-        label: "GitHub repo",
-        href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+        heading: "Målgruppe & strategi",
+        paragraphs: [
+          "Vi overvejede, om RE RŌUGE skulle henvende sig til en ny målgruppe eller bygge videre på LA RŌUGEs eksisterende kunder. Vi valgte at tage udgangspunkt i den nuværende målgruppe og i stedet øge kendskabet til secondhand-konceptet.",
+          "Fokus var derfor at gøre videresalg attraktivt, kommunikere fordelene ved re-commerce tydeligt og skabe en enkel og overskuelig brugeroplevelse. Gennem både online- og offline-touchpoints arbejdede vi på at gøre kunderne opmærksomme på, at deres LA RŌUGE-produkter kan få nyt liv hos en ny ejer.",
+          "Samtidig positionerede vi RE RŌUGE som Affordable Chic - en mulighed for at få adgang til LA RŌUGEs univers til en mere tilgængelig pris.",
+        ],
+      },
+      {
+        heading: "Designbeslutninger",
+        designDecisions: [
+          {
+            title: "Designretning",
+            paragraphs: [
+              "Vi tog udgangspunkt i LA RŌUGEs eksisterende kommunikation, særligt den personlige, moderne og energiske tone på Instagram.",
+              "Målet var ikke at skabe et nyt brand, men at videreføre LA RŌUGEs identitet og værdier i et secondhand-univers.",
+            ],
+            image: {
+              src: `${import.meta.env.BASE_URL}rerouge/moodboard.png`,
+              alt: "Moodboard for RE RŌUGEs visuelle retning",
+            },
+          },
+          {
+            title: "Farver",
+            paragraphs: [
+              "Farvepaletten bygger på LA RŌUGEs mørkerøde signaturfarve for at skabe genkendelighed. Varme jordtoner tilfører dybde og understøtter et moderne secondhand-univers.",
+              "Den røde farve refererer til femininitet, kærlighed og self-love og skaber samtidig en tydelig forbindelse til LA RŌUGEs eksisterende brandunivers.",
+            ],
+            image: {
+              src: `${import.meta.env.BASE_URL}rerouge/colorpalette.png`,
+              alt: "RE RŌUGEs farvepalette med røde og varme neutrale farver",
+            },
+          },
+          {
+            title: "Logo",
+            paragraphs: [
+              "Navnet RE RŌUGE er inspireret af ordene re-use og rose og understøtter konceptets fokus på genbrug og cirkularitet.",
+              "Rosen fungerer som metafor for re-commerce: Ligesom en rose kan blomstre igen, kan et stykke tøj få nyt liv hos en ny ejer.",
+            ],
+            image: {
+              src: `${import.meta.env.BASE_URL}rerouge/rerouge_label1.png`,
+              alt: "RE RŌUGE-logo på et mørkerødt tøjmærke",
+              cover: true,
+            },
+          },
+          {
+            title: "Typografi",
+            paragraphs: [
+              "Tenor Sans bruges til brandets typografi, mens Albert Sans skaber et enkelt og læsbart udtryk i brødtekster. Merah Merona bruges som accentfont for at tilføre personlighed og understøtte LA RŌUGEs visuelle tone på Instagram.",
+              "Sammen balancerer skrifttyperne elegance, læsbarhed og personlighed.",
+            ],
+            image: {
+              src: `${import.meta.env.BASE_URL}rerouge/typografi.png`,
+              alt: "Typografisk eksempel med Tenor Sans, Albert Sans og accenttypografi",
+            },
+          },
+        ],
+      },
+      {
+        heading: "Løsningen",
+        optimizationItems: [
+          {
+            number: "1.",
+            title: "Øget synlighed gennem markedsføring",
+            introduction:
+              "For at skabe større opmærksomhed omkring RE RŌUGE udviklede vi forslag til både offline- og online-markedsføring.",
+            channels: [
+              {
+                title: "Flyer",
+                paragraphs: [
+                  "Vi designede en flyer, der kunne vedlægges onlineordrer og uddeles i fysiske butikker. Formålet var at introducere secondhand-konceptet og samtidig minde kunderne om muligheden for at videresælge deres tøj gennem platformen på et senere tidspunkt.",
+                ],
+                images: [
+                  {
+                    src: `${import.meta.env.BASE_URL}rerouge/flyer_forside.png`,
+                    alt: "Forside af RE RŌUGE-flyer",
+                  },
+                  {
+                    src: `${import.meta.env.BASE_URL}rerouge/flyer_bagside.png`,
+                    alt: "Bagside af RE RŌUGE-flyer",
+                  },
+                ],
+              },
+              {
+                title: "Instagram",
+                paragraphs: [
+                  "Derudover udviklede vi et Instagram-koncept, som skulle øge kendskabet til RE RŌUGE og kommunikere fordelene ved både køb og salg af secondhand-tøj.",
+                ],
+                images: [
+                  {
+                    src: `${import.meta.env.BASE_URL}rerouge/ig_post.png`,
+                    alt: "Instagram-opslag for RE RŌUGE",
+                    transparent: true,
+                  },
+                  {
+                    src: `${import.meta.env.BASE_URL}rerouge/ig_profile.png`,
+                    alt: "Instagram-profil med RE RŌUGEs visuelle indhold",
+                    transparent: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            number: "2.",
+            title: "Et mere tilgængeligt trade-in flow",
+            layout: "trade-in",
+            paragraphs: [
+              "For at reducere friktionen i salgsprocessen gjorde vi det muligt for brugerne at finde tidligere køb direkte via deres konto.",
+              "Samtidig udviklede vi en alternativ løsning, hvor en AI-assistent kan identificere et produkt ud fra et billede, produktnavn eller artikelnummer.",
+              "Løsningen reducerer barriererne for videresalg og gør processen mere tilgængelig for flere brugere.",
+            ],
+            video: {
+              src: `${import.meta.env.BASE_URL}rerouge/product_finder.mp4`,
+              alt: "Produktfinder til RE RŌUGEs trade-in-flow",
+            },
+          },
+          {
+            number: "3.",
+            title: "En mere informativ produktpræsentation",
+            paragraphs: [
+              "For at skabe et mere retvisende billede af produkterne foreslog vi, at alle varer fotograferes ved modtagelse hos LA RŌUGE.",
+              "Samtidig blev produktbeskrivelserne udvidet med konkrete oplysninger om fejl, brugsspor og mangler frem for kun generelle standkategorier.",
+              "Det giver brugerne et bedre grundlag for at træffe et informeret valg og skaber større tryghed i købsoplevelsen.",
+            ],
+            images: [
+              {
+                src: `${import.meta.env.BASE_URL}rerouge/product_description1.png`,
+                alt: "RE RŌUGE produkt beskrivelse",
+              },
+              {
+                src: `${import.meta.env.BASE_URL}rerouge/product_description2.png`,
+                alt: "RE RŌUGE produkt beskrivelse",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Forretningspotentiale",
+        paragraphs: [
+          "RE RŌUGE skaber værdi for både LA RŌUGE og deres kunder. Konceptet styrker brandets position inden for cirkulær mode, øger kundeloyaliteten og holder produkterne i brandets univers længere. Samtidig får kunderne en enkel og tryg platform til køb og salg af brugt LA RŌUGE-tøj, hvilket bidrager til et mere ansvarligt forbrug og forlænger tøjets levetid.",
+        ],
       },
     ],
   },

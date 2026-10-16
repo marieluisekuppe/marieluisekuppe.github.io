@@ -6,6 +6,7 @@
   --green: #354f41;
   --green-hover: #788980;
   --border-hover: #16211b;
+  --text: #16211b;
   --beige: #f5f5f0;
   --divider: #d0d0cc;
 
@@ -70,12 +71,6 @@ textarea {
   text-decoration: none;
 }
 
-.brand img {
-  display: flex;
-  width: 140px;
-  margin-right: 0.5rem;
-}
-
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -123,27 +118,6 @@ textarea {
 
 .section {
   padding: 80px 0 40px 0;
-}
-
-.section-heading {
-  display: grid;
-  gap: 0.5rem;
-  max-width: 640px;
-  margin-bottom: 1.5rem;
-}
-
-.section-heading.large-heading h2 {
-  font-family: "the-seasons", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: clamp(1rem, 3vw, 2rem);
-  line-height: 0.95;
-  letter-spacing: 0;
-}
-
-.intro {
-  max-width: 720px;
-  padding: 1.5rem 0;
 }
 
 .eyebrow {
@@ -236,17 +210,6 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
-}
-
-.actions {
-  font-family: "roboto", serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-size: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
 }
 
 .button {
@@ -353,24 +316,11 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  gap: 20rem;
+  gap: clamp(2rem, 2vw, 12rem);
 }
 
 .contact-box > * {
   min-width: 0;
-}
-
-.contact-box h2 {
-  font-family: "roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2rem;
-  color: var(--green);
-  line-height: 0.8;
-}
-
-.contact-box h2:last-of-type {
-  margin-bottom: 0;
 }
 
 .contact-box h3 {
@@ -479,26 +429,6 @@ p {
   border-color: var(--border-hover);
   background-color: var(--green-hover);
   color: var(--beige);
-}
-
-.cta-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--green);
-  text-decoration: none;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: gap 0.25s;
-}
-
-.cta-link:hover {
-  gap: 1rem;
-  color: var(--green-hover);
-}
-
-.arrow {
-  font-size: 1.5rem;
 }
 
 /* footer styling */

@@ -30,44 +30,29 @@ function CaseVideo({ video }) {
 
   return (
     <div className="project-case-video-box">
-      {video.src ? (
-        <video
-          ref={videoRef}
-          className="project-case-video"
-          src={video.src}
-          poster={video.poster || undefined}
-          aria-label={video.alt}
-          autoPlay={false}
-          controls
-          muted
-          playsInline
-          preload="metadata"
-        />
-      ) : (
-        <div className="project-case-video-placeholder">
-          <span>Video til onboarding-flow</span>
-          <small>Tilføj en videosti i projektdataene</small>
-        </div>
-      )}
+      <video
+        ref={videoRef}
+        className="project-case-video"
+        src={video.src}
+        aria-label={video.alt}
+        autoPlay={false}
+        controls
+        muted
+        playsInline
+        preload="metadata"
+      />
     </div>
   );
 }
 
-function CaseImage({ image, index, note }) {
+function CaseImage({ image, note }) {
   return (
     <figure className="project-case-image-figure">
-      {image.src ? (
-        <img className="project-case-image" src={image.src} alt={image.alt} />
-      ) : (
-        <div
-          className="project-case-image-placeholder"
-          role="img"
-          aria-label={image.alt}
-        >
-          <span>Billede {index + 1}</span>
-          <small>Tilføj screenshot</small>
-        </div>
-      )}
+      <img
+        className={`project-case-image${image.transparent ? " is-transparent" : ""}`}
+        src={image.src}
+        alt={image.alt}
+      />
       {note && <figcaption>{note}</figcaption>}
     </figure>
   );
@@ -101,7 +86,15 @@ function ProjectPage() {
           <div className="project-hero-copy">
             <p className="project-label">{project.year} · Portfolio</p>
             <h1>{project.title}</h1>
-            <p className="project-intro">{project.description}</p>
+            {Array.isArray(project.description) ? (
+              project.description.map((paragraph) => (
+                <p className="project-intro" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <p className="project-intro">{project.description}</p>
+            )}
 
             <div className="project-actions">
               {project.links.map((link) => (
@@ -120,7 +113,7 @@ function ProjectPage() {
 
           <div className="project-hero-media">
             <img
-              className="project-hero-image"
+              className={`project-hero-image${project.slug === "Vuuh" ? " project-hero-image-vuuh" : ""}`}
               src={project.image}
               alt={`Visuelt materiale fra ${project.title}`}
             />
@@ -156,14 +149,116 @@ function ProjectPage() {
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
+                {section.designDecisions?.length > 0 && (
+                  <div className="project-design-decisions">
+                    {section.designDecisions.map((decision, index) => (
+                      <article
+                        className={`project-design-decision${index % 2 === 1 ? " is-reversed" : ""}`}
+                        key={decision.title}
+                      >
+                        <img
+                          className={`project-design-decision-image${decision.image.cover ? " is-cover" : ""}`}
+                          src={decision.image.src}
+                          alt={decision.image.alt}
+                        />
+                        <div className="project-design-decision-copy">
+                          <h3>{decision.title}</h3>
+                          {decision.paragraphs.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                )}
                 {section.subheading && <h3>{section.subheading}</h3>}
                 {section.issueCards?.length > 0 && (
-                  <div className="project-issue-grid">
+                  <div
+                    className={`project-issue-grid${project.slug === "RE RŌUGE" ? " project-issue-grid-re-rouge" : ""}${project.slug === "Vuuh" && ["De 4 centrale udfordringer", "De primære forbedringer er:"].includes(section.subheading) ? " project-issue-grid-vuuh-highlight" : ""}`}
+                  >
                     {section.issueCards.map((card) => (
                       <article className="project-issue-card" key={card.number}>
                         <span>{card.number}</span>
                         <h3>{card.title}</h3>
                         <p>{card.description}</p>
+                      </article>
+                    ))}
+                  </div>
+                )}
+                {section.optimizationItems?.length > 0 && (
+                  <div className="project-optimizations">
+                    {section.optimizationItems.map((item) => (
+                      <article
+                        className={`project-optimization${item.layout === "trade-in" ? " project-optimization-trade-in" : ""}`}
+                        key={item.title}
+                      >
+                        {!item.video && !item.images && (
+                          <h3>
+                            {item.number} {item.title}
+                          </h3>
+                        )}
+                        {item.introduction && <p>{item.introduction}</p>}
+                        {item.channels && (
+                          <>
+                            <div className="project-optimization-channels">
+                              {item.channels.map((channel) => (
+                                <div key={channel.title}>
+                                  <h4>{channel.title}</h4>
+                                  {channel.paragraphs.map((paragraph) => (
+                                    <p key={paragraph}>{paragraph}</p>
+                                  ))}
+                                </div>
+                              ))}
+                            </div>
+                            <div className="project-optimization-gallery">
+                              {item.channels
+                                .flatMap((channel) => channel.images)
+                                .map((image) => (
+                                  <CaseImage
+                                    image={image}
+                                    key={image.src || image.alt}
+                                  />
+                                ))}
+                            </div>
+                          </>
+                        )}
+                        {item.video && (
+                          <div
+                            className={`project-optimization-flow${item.layout === "trade-in" ? " project-optimization-trade-in-flow" : ""}`}
+                          >
+                            <div>
+                              <h3>
+                                {item.number} {item.title}
+                              </h3>
+                              {item.paragraphs.map((paragraph) => (
+                                <p key={paragraph}>{paragraph}</p>
+                              ))}
+                            </div>
+                            <div className="project-optimization-video">
+                              <CaseVideo video={item.video} />
+                            </div>
+                          </div>
+                        )}
+                        {item.images && (
+                          <div className="project-optimization-product">
+                            <div>
+                              <h3>
+                                {item.number} {item.title}
+                              </h3>
+                              {item.paragraphs.map((paragraph) => (
+                                <p key={paragraph}>{paragraph}</p>
+                              ))}
+                            </div>
+                            <div className="project-optimization-product-images">
+                              {item.images.map((image) => (
+                                <CaseImage
+                                  image={image}
+                                  key={image.src || image.alt}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </article>
                     ))}
                   </div>
@@ -206,10 +301,9 @@ function ProjectPage() {
                         className="project-case-image-row project-case-image-row-onboarding"
                         aria-label="Billeder af Vuuhs oprindelige onboarding"
                       >
-                        {item.onboardingImages.map((image, index) => (
+                        {item.onboardingImages.map((image) => (
                           <CaseImage
                             image={image}
-                            index={index}
                             key={image.src || image.alt}
                           />
                         ))}
@@ -223,10 +317,9 @@ function ProjectPage() {
                         className="project-case-image-row project-case-image-row-optimization"
                         aria-label="Billeder af den optimerede Vuuh onboarding"
                       >
-                        {item.optimizationImages.map((image, index) => (
+                        {item.optimizationImages.map((image) => (
                           <CaseImage
                             image={image}
-                            index={index}
                             key={image.src || image.alt}
                             note={image.point}
                           />
@@ -243,28 +336,14 @@ function ProjectPage() {
                             <figcaption>
                               {stage === "before" ? "Før" : "Efter"}
                             </figcaption>
-                            {item.comparison[stage].src ? (
-                              <img
-                                src={item.comparison[stage].src}
-                                alt={item.comparison[stage].alt}
-                              />
-                            ) : (
-                              <div className="project-comparison-placeholder">
-                                <span>
-                                  {stage === "before"
-                                    ? "Før redesign"
-                                    : "Efter redesign"}
-                                </span>
-                                <small>Tilføj et skærmbillede i public/</small>
-                              </div>
-                            )}
+                            <img
+                              src={item.comparison[stage].src}
+                              alt={item.comparison[stage].alt}
+                            />
                           </figure>
                         ))}
                       </div>
                     )}
-                    {item.closingParagraphs?.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
                   </div>
                 ))}
                 {section.points?.length > 0 && (

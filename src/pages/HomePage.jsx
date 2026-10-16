@@ -32,7 +32,7 @@ function HomePage() {
         </div>
 
         <div className="home-project-grid">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <article className="home-project-card" key={project.slug}>
               <Link to={`/projects/${project.slug}`}>
                 <div className="home-project-image-wrap">
@@ -54,10 +54,10 @@ function HomePage() {
       <section className="section contact-section">
         <div className="contact-box">
           <div>
-            <h3>Mangler I en praktikant, med interesse</h3>
+            <h3>Mangler I en praktikant, med interesse indenfor </h3>
             <h3>
-              indenfor <strong>UX/UI</strong> og{" "}
-              <strong>frontend-udvikling</strong>?
+              {" "}
+              <strong>UX/UI</strong> og <strong>frontend-udvikling</strong>?
             </h3>
           </div>
           <h3>
