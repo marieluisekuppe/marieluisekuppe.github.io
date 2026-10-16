@@ -118,21 +118,28 @@ const projects = [
     title: "MELLEMRUM",
     year: "2026",
     summary: "Redesign af fiktiv website til Mellemrum.",
-    description: "Beskrivelse her",
-    tags: ["Design", "Frontend", "Proces"],
+    description:
+      "Opgaven handler om at videreudvikle Mellemrums eventplatform ved at forbedre brugeroplevelsen, optimere den tekniske løsning og færdiggøre tilmeldingsflowet mellem events og brugere.",
+    tags: ["UX-Audit", "Supabase", "React"],
     collaboration: ["Individuelt"],
-    role: ["Optimering"],
+    role: ["Optimering", "Struktur", "Database"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}`,
+    image: `${import.meta.env.BASE_URL}mellemrum/mellemrum_mark.svg`,
     links: [
       {
-        label: "Live Site",
-        href: "https://marieluisekuppe.github.io/ixd_eksamen_spilcafe/",
+        label: "GitHub Pages",
+        href: "https://marieluisekuppe.github.io/mellemrum/",
       },
       {
-        label: "GitHub repo",
-        href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+        label: "GitHub Repository",
+        href: "https://github.com/marieluisekuppe/mellemrum",
+      },
+    ],
+    caseSections: [
+      {
+        heading: "Udfordring",
+        paragraphs: ["HVILKE UDFORDRINGER HAR MELLEMRUM??."],
       },
     ],
   },
