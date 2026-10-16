@@ -174,7 +174,7 @@ function ProjectPage() {
                 {section.subheading && <h3>{section.subheading}</h3>}
                 {section.issueCards?.length > 0 && (
                   <div
-                    className={`project-issue-grid${project.slug === "RE RŌUGE" ? " project-issue-grid-re-rouge" : ""}${project.slug === "Vuuh" && ["De 4 centrale udfordringer", "De primære forbedringer er:"].includes(section.subheading) ? " project-issue-grid-vuuh-highlight" : ""}`}
+                    className={`project-issue-grid${project.slug === "RE RŌUGE" ? " project-issue-grid-re-rouge" : ""}${project.slug === "Mellemrum" ? " project-issue-grid-mellemrum" : ""}${project.slug === "Vuuh" && ["De 4 centrale udfordringer", "De primære forbedringer er:"].includes(section.subheading) ? " project-issue-grid-vuuh-highlight" : ""}`}
                   >
                     {section.issueCards.map((card) => (
                       <article className="project-issue-card" key={card.number}>
@@ -312,6 +312,16 @@ function ProjectPage() {
                     {item.followupParagraphs?.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
+                    {item.errorImage?.length > 0 && (
+                      <div className="project-case-image-row project-case-image-row-error">
+                        {item.errorImage.map((image) => (
+                          <CaseImage
+                            image={image}
+                            key={image.src || image.alt}
+                          />
+                        ))}
+                      </div>
+                    )}
                     {item.optimizationImages?.length > 0 && (
                       <div
                         className="project-case-image-row project-case-image-row-optimization"
@@ -336,10 +346,21 @@ function ProjectPage() {
                             <figcaption>
                               {stage === "before" ? "Før" : "Efter"}
                             </figcaption>
-                            <img
-                              src={item.comparison[stage].src}
-                              alt={item.comparison[stage].alt}
-                            />
+                            {item.comparison[stage].type === "video" ? (
+                              <video
+                                src={item.comparison[stage].src}
+                                aria-label={item.comparison[stage].alt}
+                                controls
+                                muted
+                                playsInline
+                                preload="metadata"
+                              />
+                            ) : (
+                              <img
+                                src={item.comparison[stage].src}
+                                alt={item.comparison[stage].alt}
+                              />
+                            )}
                           </figure>
                         ))}
                       </div>

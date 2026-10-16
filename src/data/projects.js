@@ -120,12 +120,12 @@ const projects = [
     summary: "Redesign af fiktiv website til Mellemrum.",
     description:
       "Opgaven handler om at videreudvikle Mellemrums eventplatform ved at forbedre brugeroplevelsen, optimere den tekniske løsning og færdiggøre tilmeldingsflowet mellem events og brugere.",
-    tags: ["UX-Audit", "Supabase", "React"],
+    tags: ["Teknisk-Audit", "Supabase", "React"],
     collaboration: ["Individuelt"],
     role: ["Optimering", "Struktur", "Database"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}mellemrum/mellemrum_mark.svg`,
+    image: `${import.meta.env.BASE_URL}mellemrum/favicon.svg`,
     links: [
       {
         label: "GitHub Pages",
@@ -135,11 +135,78 @@ const projects = [
         label: "GitHub Repository",
         href: "https://github.com/marieluisekuppe/mellemrum",
       },
+      {
+        label: "Teknisk Audit",
+        href: `${import.meta.env.BASE_URL}mellemrum/teknisk_audit_kuppe.pdf`,
+      },
     ],
     caseSections: [
       {
-        heading: "Udfordring",
-        paragraphs: ["HVILKE UDFORDRINGER HAR MELLEMRUM??."],
+        heading: "Undersøgelse og prioritet",
+        paragraphs: [
+          "Som man siger, man er aldrig rigtig færdig med at kode... i dette tilfælde er det heller ingen undtagelse. Derfor har jeg udvalgt to centrale områder at arbejde videre med.",
+        ],
+        subheading: "2 centrale områder til forbedring",
+        issueCards: [
+          {
+            number: "01",
+            title: "Tilmeldningsflow",
+            description:
+              "Tilmelding fungerer ikke, fordi ingen data bliver sendt til Supabase.",
+          },
+          {
+            number: "02",
+            title: "Feedback",
+            description:
+              "Brugerne får ingen respons på at man fx har tilmeldt sig et event eller indtastet noget forkert.",
+          },
+        ],
+      },
+      {
+        heading: "Optimering",
+        paragraphs: [],
+        items: [
+          {
+            heading: "1. Optimering af Tilmeldningsflow",
+            paragraphs: [
+              "En af opgaverne i casen var at færdiggøre tilmeldingsflowet på platformen. Tidligere kunne brugerne ikke tilmelde sig events direkte gennem løsningen, hvilket skabte usikkerhed om deres deltagelse. Derfor implementerede jeg et tilmeldingsflow, der registrerer tilmeldinger i Supabase og forbinder den enkelte deltager med det valgte event. Derudover tilføjede jeg en tydelig succesbesked, så brugerne får klar feedback, når deres tilmelding er gennemført.",
+            ],
+            comparison: {
+              before: {
+                src: `${import.meta.env.BASE_URL}mellemrum/tilmelding_ingen_bekræftelse.mp4`,
+                alt: "Mellemrum tilmelding før",
+                type: "video",
+              },
+              after: {
+                src: `${import.meta.env.BASE_URL}mellemrum/tilmeldings_bekræftelse.mp4`,
+                alt: "Mellemrum tilmelding efter",
+                type: "video",
+              },
+            },
+          },
+          {
+            heading: "2. Mere feedback ved actions",
+            paragraphs: [
+              "Det er vigtigt, at brugerne får tydelig feedback, hvis noget er udfyldt forkert. Hvis der for eksempel indtastes en ugyldig e-mailadresse, viser systemet en konkret fejlbesked, der gør det klart, hvad der skal rettes. Tidligere fik brugerne kun begrænset feedback i tilmeldingsformularen, hvilket gjorde det svært at gennemskue, hvilke felter der manglede eller indeholdt fejl. Derfor implementerede jeg tydelige fejlbeskeder og validering af inputfelter, så brugerne hurtigt kan forstå og rette eventuelle fejl.",
+            ],
+            errorImage: [
+              {
+                src: `${import.meta.env.BASE_URL}mellemrum/fejl_besked.png`,
+                alt: "Screenshot af en fejlbesked ved forkert intastet email",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Næste skridt?",
+        paragraphs: [
+          "Selvom nogle funktioner er blevet implementeret, er der fortsat områder, hvor platformen sagtens kan forbedres:",
+          "1) Sidefokus og navigation: Når brugerne skifter mellem sider, bevares deres tidligere scroll-position. Det kan skabe forvirring, da de ikke automatisk starter øverst på den nye side.",
+          "2) Fejlhåndtering: Ved fejl vises der i dag ikke tydelige beskeder til brugeren. Mere informative fejlmeddelelser kan hjælpe brugerne med at forstå, hvad der er gået galt, og hvordan problemet kan løses.",
+          "3) Loading states: Ved langsom internetforbindelse vises der ingen indikation af, at siden indlæses. Tilføjelse af loading-animationer eller skeletvisninger vil skabe en mere tryg og forståelig brugeroplevelse.,",
+          "4) Tilgængelighed: Farvekontraster kan forbedres for at øge læsbarheden, og flere elementer kan optimeres til skærmlæsere gennem tydeligere labels og beskrivelser. Dette vil gøre platformen mere tilgængelig for alle brugere.",
+        ],
       },
     ],
   },
