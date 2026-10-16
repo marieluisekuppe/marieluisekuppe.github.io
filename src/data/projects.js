@@ -125,7 +125,7 @@ const projects = [
     role: ["Optimering", "Struktur", "Database"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}mellemrum/favicon.svg`,
+    image: `${import.meta.env.BASE_URL}portfolio-mellemrum/favicon.svg`,
     links: [
       {
         label: "GitHub Pages",
@@ -137,7 +137,7 @@ const projects = [
       },
       {
         label: "Teknisk Audit",
-        href: `${import.meta.env.BASE_URL}mellemrum/teknisk_audit_kuppe.pdf`,
+        href: `${import.meta.env.BASE_URL}portfolio-mellemrum/teknisk_audit_kuppe.pdf`,
       },
     ],
     caseSections: [
@@ -173,12 +173,12 @@ const projects = [
             ],
             comparison: {
               before: {
-                src: `${import.meta.env.BASE_URL}mellemrum/tilmelding_ingen_bekræftelse.mp4`,
+                src: `${import.meta.env.BASE_URL}portfolio-mellemrum/tilmelding_ingen_bekræftelse.mp4`,
                 alt: "Mellemrum tilmelding før",
                 type: "video",
               },
               after: {
-                src: `${import.meta.env.BASE_URL}mellemrum/tilmeldings_bekræftelse.mp4`,
+                src: `${import.meta.env.BASE_URL}portfolio-mellemrum/tilmeldings_bekræftelse.mp4`,
                 alt: "Mellemrum tilmelding efter",
                 type: "video",
               },
@@ -191,7 +191,7 @@ const projects = [
             ],
             errorImage: [
               {
-                src: `${import.meta.env.BASE_URL}mellemrum/fejl_besked.png`,
+                src: `${import.meta.env.BASE_URL}portfolio-mellemrum/fejl_besked.png`,
                 alt: "Screenshot af en fejlbesked ved forkert intastet email",
               },
             ],
