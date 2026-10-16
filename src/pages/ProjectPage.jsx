@@ -113,7 +113,7 @@ function ProjectPage() {
 
           <div className="project-hero-media">
             <img
-              className="project-hero-image"
+              className={`project-hero-image${project.slug === "Vuuh" ? " project-hero-image-vuuh" : ""}`}
               src={project.image}
               alt={`Visuelt materiale fra ${project.title}`}
             />

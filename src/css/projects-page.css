@@ -16,11 +16,6 @@
   gap: 1.25rem;
 }
 
-.home-project-card[data-project="Vuuh"] .home-project-image-wrap img {
-  padding: 2rem;
-  object-fit: contain;
-}
-
 @media (max-width: 900px) {
   .projects-page {
     padding-top: 1rem;

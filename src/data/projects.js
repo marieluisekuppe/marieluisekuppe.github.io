@@ -148,7 +148,7 @@ const projects = [
     role: ["Optimering"],
     duration: ["2 uger"],
 
-    image: `${import.meta.env.BASE_URL}vuuh/vuuh_logo.svg`,
+    image: `${import.meta.env.BASE_URL}vuuh/vuuh_logo1.svg`,
     links: [
       {
         label: "Se løsning",

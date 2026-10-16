@@ -7,6 +7,10 @@
   --vuuh: #2f2747;
   background: var(--project-surface);
 }
+.project-detail .project-hero-image-vuuh {
+  width: min(80%, 420px);
+  max-height: 320px;
+}
 
 .project-back {
   display: flex;
