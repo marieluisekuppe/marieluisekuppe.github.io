@@ -50,57 +50,6 @@ function HomePage() {
           ))}
         </div>
       </section>
-
-      <section className="section contact-section">
-        <div className="contact-box">
-          <div>
-            <h3>Mangler I en praktikant, med interesse indenfor </h3>
-            <h3>
-              {" "}
-              <strong>UX/UI</strong> og <strong>frontend-udvikling</strong>?
-            </h3>
-          </div>
-          <h3>
-            Så har I fundet{" "}
-            <Link to="/about" className="underline">
-              mig
-            </Link>
-            !
-          </h3>
-        </div>
-
-        <div className="divider"></div>
-
-        <div className="footer-contact">
-          <a className="email-link" href="mailto:mluisek@gmail.com">
-            <span className="envelope">✉</span>
-            <span className="email-text">mluisek@gmail.com</span>
-          </a>
-          <div className="divider-vertical"></div>
-          <div className="telephone">
-            <span className="telephone">📞</span>
-            <span className="telephone-text">22 70 23 72</span>
-          </div>
-          <div className="divider-vertical"></div>
-          <div className="social-links">
-            <a
-              href="https://www.linkedin.com/in/marie-luise-kuppe-a2a815267/"
-              title="LinkedIn"
-              aria-label="LinkedIn"
-            >
-              <span>in</span>
-            </a>
-
-            <a
-              href="https://www.instagram.com/marieluisekuppe/"
-              title="Instagram"
-              aria-label="Instagram"
-            >
-              <span>ig</span>
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
