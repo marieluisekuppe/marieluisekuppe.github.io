@@ -20,6 +20,8 @@ function ScrollToTop() {
 }
 
 function App() {
+  const { pathname } = useLocation();
+
   return (
     <>
       <ScrollToTop />
@@ -36,7 +38,7 @@ function App() {
         </Routes>
       </main>
 
-      <Footer />
+      {pathname !== "/contact" && <Footer />}
     </>
   );
 }
