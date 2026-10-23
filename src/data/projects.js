@@ -21,6 +21,12 @@ const projects = [
         href: "https://github.com/marieluisekuppe/web-app-2gather",
       },
     ],
+    caseSections: [
+      {
+        heading: "Mere information følger",
+        paragraphs: ["Mere om projektet her."],
+      },
+    ],
   },
 
   {
@@ -109,6 +115,12 @@ const projects = [
       {
         label: "GitHub repo",
         href: "https://github.com/marieluisekuppe/ixd_eksamen_spilcafe",
+      },
+    ],
+    caseSections: [
+      {
+        heading: "Mere information følger",
+        paragraphs: ["Mere om projektet her."],
       },
     ],
   },
