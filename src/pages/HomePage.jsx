@@ -11,7 +11,7 @@ function HomePage() {
       <section className="hero-section">
         <div className="hero-text-block">
           <h1>Halløjsa!</h1>
-          <h2>Jeg er Marie-Luise</h2>
+          <h2>Portfoilio</h2>
           <p className="hero-text">
             Multimediedesignstuderende med passion for design, programmering og
             problemløsning. Jeg elsker nye udfordringer og motiveres af at skabe

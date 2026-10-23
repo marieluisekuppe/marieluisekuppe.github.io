@@ -269,13 +269,13 @@ li {
 
 .hero-text,
 .lead {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 /* hero section grid */
 .hero-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
   align-items: center;
 }
 
@@ -286,7 +286,7 @@ li {
 }
 
 .hero-image img {
-  width: 65%;
+  width: 75%;
   object-fit: cover;
   border-radius: 0.5rem;
 }
@@ -294,15 +294,15 @@ li {
 /* about page */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 3rem;
   align-items: start;
   padding-top: 1.5rem;
 }
 
 .about-image img {
-  width: 85%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   border-radius: 0.5rem;
 }
