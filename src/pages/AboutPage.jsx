@@ -25,17 +25,21 @@ function AboutPage() {
 
       <section className="info-list" aria-label="Om mig detaljer">
         <div>
-          <h2>Faglige værktøjer</h2>
-          <p>
-            Adobe: Illustrator, Photoshop, After Effects - CSS, Figma, GitHub,
-            HTML, JavaScript, React, Vite
-          </p>
+          <h2>
+            <strong>Mine faglige værktøjer</strong>
+          </h2>
+
+          <p>Figma: Design & prototyping </p>
+          <p>Programmering: HTLM, CSS, JavaScript, React og Vite</p>
+          <p>Andet: Onboarding, Optimering, Kundeservice og Word Press</p>
         </div>
         <div>
-          <h2>Jeg er nysgerrig på</h2>
+          <h2>
+            <strong>Mine interesse områder</strong>
+          </h2>
           <p>
-            Brugeroplevelser, visuel identitet og hvordan kode bliver til noget
-            brugbart.
+            UX/UI Design, Frontend programmering, optimering og visuel
+            identitet.
           </p>
         </div>
       </section>

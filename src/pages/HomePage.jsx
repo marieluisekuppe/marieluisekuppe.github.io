@@ -16,6 +16,12 @@ function HomePage() {
             Multimediedesignstuderende med passion for design, programmering og
             problemløsning. Jeg elsker nye udfordringer og motiveres af at skabe
             løsninger, der ser både godt ud og men også fungerer teknisk.
+            <br />
+            <br />
+            <strong>Interesseområder:</strong>
+            <br />
+            UX/UI Design, Optimering, Frontend-udvikling, <br />
+            Webdesign og Visuel identitet.
           </p>
         </div>
         <div className="hero-image">
