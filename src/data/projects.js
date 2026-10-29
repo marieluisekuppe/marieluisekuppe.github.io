@@ -10,7 +10,7 @@ const projects = [
     collaboration: ["3 personer"],
     role: ["User Research"],
     duration: ["10 uger"],
-    image: `${import.meta.env.BASE_URL}2gather.png`,
+    image: `${import.meta.env.BASE_URL}2gather_mockup.png`,
     links: [
       {
         label: "Live Site",
