@@ -9,23 +9,13 @@ function HomePage() {
   return (
     <div className="page">
       <section className="hero-section">
-        <div className="hero-text-block">
-          <h1>Halløjsa!</h1>
-          <h2>Portfoilio</h2>
-          <p className="hero-text">
-            Multimediedesignstuderende med passion for design, programmering og
-            problemløsning. Jeg elsker nye udfordringer og motiveres af at skabe
-            løsninger, der ser både godt ud og men også fungerer teknisk.
-            <br />
-            <br />
-            <strong>Interesseområder:</strong>
-            <br />
-            UX/UI Design, Optimering, Frontend-udvikling, <br />
-            Webdesign og Visuel identitet.
-          </p>
+        <img className="hero-ornament" src="/hero-ornament.svg" alt="" />
+        <div className="hero-intro">
+          <h1>Marie-Luise<br />Kuppe</h1>
+          <p>Multimediedesigner</p>
         </div>
-        <div className="hero-image">
-          <img src="/kuppe.jpeg" alt="Marie-Luise Kuppe" />
+        <div className="hero-portrait-frame">
+          <img src="/kuppe3.png" alt="Marie-Luise Kuppe" />
         </div>
       </section>
 
